@@ -19,23 +19,26 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: Material for MkDocs
-site_description: A Material Design theme for MkDocs
-site_author: Martin Donath
-site_url: https://squidfunk.github.io/mkdocs-material/
+site_name: Velma.io API
+site_description: Documentation for the Velma API's
+site_author: NSN Solutions, Inc.
+#site_url: https://squidfunk.github.io/mkdocs-material/
+site_url: https://readme.velma.io
 
 # Repository
-repo_name: squidfunk/mkdocs-material
-repo_url: https://github.com/squidfunk/mkdocs-material
-edit_uri: ""
+#repo_name: squidfunk/mkdocs-material
+#repo_url: https://github.com/squidfunk/mkdocs-material
+#edit_uri: ""
 
 # Copyright
-copyright: 'Copyright &copy; 2016 - 2018 Martin Donath'
+copyright: 'Copyright &copy; 2018 NSN Solutions, Inc.'
 
 # Configuration
 theme:
   name: null
   custom_dir: material
+  #logo: 'images/Velma_Logo_no_tag.svg'
+  logo: 'images/Velma_logo_cmyk.png'
 
   # 404 page
   static_templates:
@@ -50,26 +53,26 @@ theme:
   feature:
     tabs: true
   palette:
-    primary: indigo
-    accent: indigo
+    primary: Indigo
+    accent: Amber
   font:
     text: Roboto
     code: Roboto Mono
   favicon: assets/images/favicon.png
-  logo:
-    icon: "\uE80C"
+  logo: 'images/Velma_Logo_no_tag.svg'
+    #icon: "\uE80C"
 
 # Customization
 extra:
   social:
-    - type: globe
-      link: http://struct.cc
-    - type: github-alt
-      link: https://github.com/squidfunk
-    - type: twitter
-      link: https://twitter.com/squidfunk
-    - type: linkedin
-      link: https://linkedin.com/in/squidfunk
+    - type: #globe
+      link: #http://struct.cc
+    - type: #github-alt
+      link: #https://github.com/squidfunk
+    - type: #twitter
+      link: #https://twitter.com/squidfunk
+    - type: #linkedin
+      link: #https://linkedin.com/in/squidfunk
 
 # Extensions
 markdown_extensions:
