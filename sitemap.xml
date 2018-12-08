@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+     <loc>https://readme.velma.io/getting-started/introduction/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/getting-started/api-reference/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/getting-started/hierarchy/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://readme.velma.io/</loc>
      <lastmod>2018-12-08</lastmod>
      <changefreq>daily</changefreq>
@@ -42,11 +57,6 @@
     </url>
     <url>
      <loc>https://readme.velma.io/specimen/</loc>
-     <lastmod>2018-12-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://readme.velma.io/extensions/admonition/</loc>
      <lastmod>2018-12-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
