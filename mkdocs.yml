@@ -19,7 +19,7 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: Velma.io API
+site_name: Readme
 site_description: Documentation for the Velma API's
 site_author: NSN Solutions, Inc.
 #site_url: https://squidfunk.github.io/mkdocs-material/
@@ -114,6 +114,7 @@ nav:
     - Permalinks: extensions/permalinks.md
     - PyMdown: extensions/pymdown.md
   - Specimen: specimen.md
+  - Specimen2: extensions/admonition.md
   - Customization: customization.md
   - Compliance with GDPR: compliance.md
   - Release notes: release-notes.md
