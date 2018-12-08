@@ -13,7 +13,7 @@
         <meta name="description" content="Documentation for the Velma API's">
       
       
-        <link rel="canonical" href="https://readme.velma.io/getting-started/api-reference/">
+        <link rel="canonical" href="https://readme.velma.io/getting-started/glossary/">
       
       
         <meta name="author" content="NSN Solutions, Inc.">
@@ -42,7 +42,7 @@
     
     
       
-        <title>API Reference - Velma.io</title>
+        <title>Glossary - Velma.io</title>
       
     
     
@@ -86,7 +86,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#api-reference" tabindex="1" class="md-skip">
+      <a href="#glossary-of-terms" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -112,7 +112,7 @@
                 Velma.io
               </span>
               <span class="md-header-nav__topic">
-                API Reference
+                Glossary
               </span>
             
           
@@ -278,20 +278,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="API Reference" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../api-reference/" title="API Reference" class="md-nav__link">
       API Reference
     </a>
-    
   </li>
 
         
@@ -323,11 +314,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../glossary/" title="Glossary" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Glossary" class="md-nav__link md-nav__link--active">
       Glossary
     </a>
+    
   </li>
 
         
@@ -568,9 +568,74 @@
               
                 
                 
-                <h1 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h1>
-<p>The VFS API is organized around REST. Our API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients. We support cross-origin resource sharing, allowing you to interact securely with our API from a client-side web application (though you should never expose your secret API key in any public website's client-side code). JSON is returned by all API responses, including errors.</p>
-<p>To make the API as explorable as possible, a demo mode is provided with keys and a library for testing out the system.  Subsequent to on-boarding, you will be provided a beta and live sets of keys.  There is no "switch" for changing between modes, just use the appropriate keys and endpoints to perform a live or test request.  For orders that incur a cost, like print and mail, if the requests are made with demo or beta mode credentials, actual charges will not be run and live orders will not be placed.</p>
+                <h1 id="glossary-of-terms">Glossary of Terms<a class="headerlink" href="#glossary-of-terms" title="Permanent link">&para;</a></h1>
+<p>You will encounter the following terms throughout the documentation:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VFS</td>
+<td>Velma Fulfillment System</td>
+</tr>
+<tr>
+<td>Tokens</td>
+<td>Values that are replaced in the command packet</td>
+</tr>
+<tr>
+<td>Sponsor</td>
+<td>Client of VFS</td>
+</tr>
+<tr>
+<td>Client</td>
+<td>Client of the Sponsor</td>
+</tr>
+<tr>
+<td>Template</td>
+<td>HTML used in marketing</td>
+</tr>
+<tr>
+<td>Recipients</td>
+<td>The consumer of a communication sent through VFS</td>
+</tr>
+<tr>
+<td>Command Packet Template</td>
+<td>Refers to a command packet</td>
+</tr>
+<tr>
+<td>Token Wrappers</td>
+<td>Refers to a type of replaceable token</td>
+</tr>
+<tr>
+<td>vfVar</td>
+<td>Refers to a token replacement pattern</td>
+</tr>
+<tr>
+<td>Sponsor Application</td>
+<td>Refers to any application using VFS.</td>
+</tr>
+<tr>
+<td>JWT Token</td>
+<td>Refers to the authentication token used.</td>
+</tr>
+<tr>
+<td>Sponsor Key</td>
+<td>Refers to the provided sponsor key.</td>
+</tr>
+<tr>
+<td>Client Key</td>
+<td>Refers to the provided client key.</td>
+</tr>
+<tr>
+<td>Secret</td>
+<td>Refers to the secret code used to sign the JWT Token.</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
@@ -591,7 +656,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../introduction/" title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../authentication/" title="Authentication" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -600,19 +665,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Introduction
+                Authentication
               </span>
             </div>
           </a>
         
         
-          <a href="../hierarchy/" title="Hierarchy" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../.." title="Communication" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Hierarchy
+                Communication
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

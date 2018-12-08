@@ -1,0 +1,1024 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for the Velma API's">
+      
+      
+        <link rel="canonical" href="https://readme.velma.io/getting-started/authentication/">
+      
+      
+        <meta name="author" content="NSN Solutions, Inc.">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../images/TrackerIcon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>Authentication - Velma.io</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#authentication" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://readme.velma.io" title="Velma.io" class="md-header-nav__button md-logo">
+          
+            <img src="../../images/TrackerIcon.png" width="40" height="40">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Velma.io
+              </span>
+              <span class="md-header-nav__topic">
+                Authentication
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../introduction/" title="Getting Started" class="md-tabs__link md-tabs__link--active">
+          Getting Started
+        </a>
+      
+    </li>
+  
+
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Communication" class="md-tabs__link">
+        Communication
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../extensions/admonition/" title="Libraries" class="md-tabs__link">
+          Libraries
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://readme.velma.io" title="Velma.io" class="md-nav__button md-logo">
+      
+        <img src="../../images/TrackerIcon.png" width="48" height="48">
+      
+    </a>
+    Velma.io
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api-reference/" title="API Reference" class="md-nav__link">
+      API Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hierarchy/" title="Hierarchy" class="md-nav__link">
+      Hierarchy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Authentication
+      </label>
+    
+    <a href="./" title="Authentication" class="md-nav__link md-nav__link--active">
+      Authentication
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#security" title="Security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jwt-token" title="JWT Token" class="md-nav__link">
+    JWT Token
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt-authentication-workflow" title="JWT Authentication Workflow" class="md-nav__link">
+    JWT Authentication Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jwt-sections" title="JWT Sections" class="md-nav__link">
+    JWT Sections
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" title="Header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload" title="Payload" class="md-nav__link">
+    Payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signature" title="Signature" class="md-nav__link">
+    Signature
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-key" title="API KEY" class="md-nav__link">
+    API KEY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sponsor-and-client-keys" title="Sponsor and Client Keys" class="md-nav__link">
+    Sponsor and Client Keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" title="Summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Communication" class="md-nav__link">
+      Communication
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Libraries
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Libraries
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/admonition/" title="Admonition" class="md-nav__link">
+      Admonition
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/codehilite/" title="CodeHilite" class="md-nav__link">
+      CodeHilite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/footnotes/" title="Footnotes" class="md-nav__link">
+      Footnotes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/metadata/" title="Metadata" class="md-nav__link">
+      Metadata
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/permalinks/" title="Permalinks" class="md-nav__link">
+      Permalinks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/pymdown/" title="PyMdown" class="md-nav__link">
+      PyMdown
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../specimen/" title="Specimen" class="md-nav__link">
+      Specimen
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../customization/" title="Customization" class="md-nav__link">
+      Customization
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../compliance/" title="Compliance with GDPR" class="md-nav__link">
+      Compliance with GDPR
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/" title="Release notes" class="md-nav__link">
+      Release notes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../authors-notes/" title="Author's notes" class="md-nav__link">
+      Author's notes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#security" title="Security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jwt-token" title="JWT Token" class="md-nav__link">
+    JWT Token
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt-authentication-workflow" title="JWT Authentication Workflow" class="md-nav__link">
+    JWT Authentication Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jwt-sections" title="JWT Sections" class="md-nav__link">
+    JWT Sections
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" title="Header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload" title="Payload" class="md-nav__link">
+    Payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signature" title="Signature" class="md-nav__link">
+    Signature
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-key" title="API KEY" class="md-nav__link">
+    API KEY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sponsor-and-client-keys" title="Sponsor and Client Keys" class="md-nav__link">
+    Sponsor and Client Keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" title="Summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h1>
+<h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h2>
+<p>VFS ensures your api calls are secure using multiple levels of security</p>
+<ol>
+<li>JWT Token base authentication</li>
+<li>API keys  </li>
+<li>Sponsor and Client Keys</li>
+</ol>
+<h2 id="jwt-token">JWT Token<a class="headerlink" href="#jwt-token" title="Permanent link">&para;</a></h2>
+<p>VFS uses JWT token based authentication for API and VFS application security.  The token is generated by making a call to the VFS API and passed back into the VFS system by the customer application and verified before any internal processing can take place. The JWT token carries all the necessary information within its payload to be authorized for processing.</p>
+<ul>
+<li>JWT does not hide or obscure data in any way</li>
+<li>Data is created by an authentic source, encoded and signed</li>
+<li>VFS verifies the authenticity of the source of the data</li>
+</ul>
+<p>A username and password is provided for each sponsor if they are requesting a JWT token from the VFS system. They will need to be passed in the header of the <strong>Generate JWT</strong> call.</p>
+<p>They are in the following form.</p>
+<p><code>jwtUsername: fcd523be205740b0b9e54f4d748f4d0f</code></p>
+<p><code>jwtPassword: d6522bf09843470bab47ec56643499e2</code></p>
+<p>You can try it out here:  <a href="https://readme.velma.io/#a6912ad6-5197-4ea6-b923-e7c5f9ffde5d">Generate JWT Token</a></p>
+<h3 id="jwt-authentication-workflow">JWT Authentication Workflow<a class="headerlink" href="#jwt-authentication-workflow" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The assumption is that there is a Sponsor Application making the API calls</li>
+<li>A user of that application would "sign in" using their Sponsor username and password</li>
+<li>The Sponsor Application would make a call to a server on their side</li>
+<li>The server would generate the JWT token and pass it back to the application for use</li>
+<li>All the calls to the VFS system will then be made with that token + API Key</li>
+</ul>
+<p><img alt="alt text" src="https://s3-us-west-2.amazonaws.com/vfs-docs/Security/JWT1.png" /></p>
+<h3 id="jwt-sections">JWT Sections<a class="headerlink" href="#jwt-sections" title="Permanent link">&para;</a></h3>
+<p>The token is broken down into 3 sections
+1. Header - info about how the JWT signature should be computed
+2. Payload - main payload of the token, also called claims
+3. Signature - computed signature</p>
+<h4 id="header">Header<a class="headerlink" href="#header" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="err">“typ”:</span> <span class="err">“JWT”,</span>   
+  <span class="err">“alg”:</span> <span class="err">“HS256”</span>
+<span class="p">}</span>
+</pre></div>
+
+<h4 id="payload">Payload<a class="headerlink" href="#payload" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;ver&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;apiKey&quot;</span><span class="p">:</span> <span class="s2">&quot;49ep6U3OEH2UR56Dg4BNp6qKxNCnKeDP3l29cyZg”,</span>
+<span class="s2">    &quot;</span><span class="err">sponsorKey</span><span class="s2">&quot;: &quot;</span><span class="mi">0</span><span class="err">a</span><span class="mi">3</span><span class="err">c</span><span class="mi">5</span><span class="err">aad</span><span class="mi">8</span><span class="err">cfb</span><span class="mi">496</span><span class="err">eae</span><span class="mi">7966339</span><span class="err">a</span><span class="mi">024965</span><span class="err">”</span><span class="p">,</span>
+    <span class="nt">&quot;clientKey&quot;</span><span class="p">:</span> <span class="s2">&quot;DEMO6661549e4aa9811754bb29880cc9”,   </span>
+<span class="s2">    &quot;</span><span class="err">userName</span><span class="s2">&quot;: &quot;</span><span class="err">DEMOUSER”</span><span class="p">,</span>
+    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;demouser@mailinator.com”</span>
+<span class="s2">    &quot;</span><span class="err">iss</span><span class="s2">&quot;: &quot;</span><span class="err">DMO”</span><span class="p">,</span>  
+    <span class="nt">&quot;iat&quot;</span><span class="p">:</span> <span class="mi">1515617562</span><span class="p">,</span>
+    <span class="nt">&quot;exp&quot;</span><span class="p">:</span> <span class="mi">1516827162</span>
+<span class="p">}</span>   
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>typ</code></td>
+<td>declaring type</td>
+</tr>
+<tr>
+<td><code>alg</code></td>
+<td>algorithm used</td>
+</tr>
+<tr>
+<td><code>ver</code></td>
+<td>provided following on-boarding used for VFS reference</td>
+</tr>
+<tr>
+<td><code>apiKey</code></td>
+<td>provided following on-boarding</td>
+</tr>
+<tr>
+<td><code>sponsorKey</code></td>
+<td>provided following on-boarding</td>
+</tr>
+<tr>
+<td><code>clientKey</code></td>
+<td>provided following on-boarding</td>
+</tr>
+<tr>
+<td><code>userName</code></td>
+<td>reference userName</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>reference Email (Useful if notifications are necessary)</td>
+</tr>
+<tr>
+<td><code>iat</code></td>
+<td>issuer date/time: in unix time</td>
+</tr>
+<tr>
+<td><code>exp</code></td>
+<td>expiry date/time: in unix time</td>
+</tr>
+</tbody>
+</table>
+<h4 id="signature">Signature<a class="headerlink" href="#signature" title="Permanent link">&para;</a></h4>
+<p>Formed from the Header, Payload and Secret</p>
+<p><em>The following is pseudo code representing how to create the signature</em></p>
+<div class="codehilite"><pre><span></span><span class="err">var</span> <span class="err">encodedString</span> <span class="err">=</span> <span class="err">base</span><span class="mi">64</span><span class="err">UrlEncode(header)</span> <span class="err">+</span> <span class="s2">&quot;.&quot;</span> <span class="err">+</span> <span class="err">base</span><span class="mi">64</span><span class="err">UrlEncode(payload);</span>
+<span class="err">HMACSHA</span><span class="mi">256</span><span class="err">(encodedString,</span> <span class="err">&#39;secret&#39;)</span>
+</pre></div>
+
+<p>**Resulting Signature: **
+<div class="codehilite"><pre><span></span><span class="err">-xN_h</span><span class="mi">82</span><span class="err">PHVTCMA</span><span class="mi">9</span><span class="err">vdoHrcZxH-x</span><span class="mi">5</span><span class="err">mb</span><span class="mi">11</span><span class="err">y</span><span class="mi">1537</span><span class="err">t</span><span class="mi">3</span><span class="err">rGzcM</span>
+</pre></div></p>
+<p>So, for example, you may have a <mark>header</mark> of:</p>
+<div class="codehilite"><pre><span></span><span class="err">eyJ</span><span class="mi">0</span><span class="err">eXAiOiJKV</span><span class="mi">1</span><span class="err">QiLCJhbGciOiJIUzI</span><span class="mi">1</span><span class="err">NiJ</span><span class="mi">9</span>
+</pre></div>
+
+<p>and a <mark>payload</mark> of:</p>
+<div class="codehilite"><pre><span></span><span class="err">eyJ</span><span class="mi">1</span><span class="err">c</span><span class="mi">2</span><span class="err">VySWQiOiJiMDhmODZhZi</span><span class="mi">0</span><span class="err">zNWRhLTQ</span><span class="mi">4</span><span class="err">ZjItOGZhYi</span><span class="mi">1</span><span class="err">jZWYzOTA</span><span class="mi">0</span><span class="err">NjYwYmQifQ</span>
+</pre></div>
+
+<p>with <mark>signature</mark> of :</p>
+<div class="codehilite"><pre><span></span><span class="err">-xN_h</span><span class="mi">82</span><span class="err">PHVTCMA</span><span class="mi">9</span><span class="err">vdoHrcZxH-x</span><span class="mi">5</span><span class="err">mb</span><span class="mi">11</span><span class="err">y</span><span class="mi">1537</span><span class="err">t</span><span class="mi">3</span><span class="err">rGzcM</span>
+</pre></div>
+
+<p>We combine all the components together resulting in the following JWT Token :</p>
+<div class="codehilite"><pre><span></span><span class="err">eyJ</span><span class="mi">0</span><span class="err">eXAiOiJKV</span><span class="mi">1</span><span class="err">QiLCJhbGciOiJIUzI</span><span class="mi">1</span><span class="err">NiJ</span><span class="mi">9</span><span class="err">.eyJ</span><span class="mi">1</span><span class="err">c</span><span class="mi">2</span><span class="err">VySWQiOiJiMDhmODZhZi</span><span class="mi">0</span><span class="err">zNWRhLTQ</span><span class="mi">4</span><span class="err">ZjItOGZhYi</span><span class="mi">1</span><span class="err">jZWYzOTA</span><span class="mi">0</span><span class="err">NjYwYmQifQ.-xN_h</span><span class="mi">82</span><span class="err">PHVTCMA</span><span class="mi">9</span><span class="err">vdoHrcZxH-x</span><span class="mi">5</span><span class="err">mb</span><span class="mi">11</span><span class="err">y</span><span class="mi">1537</span><span class="err">t</span><span class="mi">3</span><span class="err">rGzcM</span>
+</pre></div>
+
+<p><strong>Verifying the JWT</strong></p>
+<ul>
+<li>The above example was signed by the HS256 algorithm ("alg”: “HS256”)</li>
+<li>The VFS server and the sponsor application know the secret</li>
+<li>VFS will verify the signature of the token using the secret</li>
+<li>If signature matches then the the JWT token is Valid</li>
+<li>If the signature is not valid then it views it as a potential attack</li>
+<li>This ensures trust between an application and it's users</li>
+</ul>
+<h2 id="api-key">API KEY<a class="headerlink" href="#api-key" title="Permanent link">&para;</a></h2>
+<p>Along with the JWT Token the Sponsor will also need an API Key to make all calls.</p>
+<div class="codehilite"><pre><span></span><span class="err">E.g.</span> <span class="err">a</span><span class="mi">9</span><span class="err">fb</span><span class="mi">4</span><span class="err">d</span><span class="mi">11</span><span class="err">bb</span><span class="mi">36466</span><span class="err">f</span><span class="mi">98</span><span class="err">b</span><span class="mi">2</span><span class="err">a</span><span class="mi">70</span><span class="err">fe</span><span class="mi">0</span><span class="err">fa</span><span class="mi">9</span><span class="err">aa</span><span class="mi">4</span>
+</pre></div>
+
+<ul>
+<li>This key is provided and controlled by VFS</li>
+<li>VFS can throttle or revoke the key if necessary</li>
+</ul>
+<p>During an API call the header will contain both JWT token and API Key</p>
+<p><em>Example API Call Header</em>
+<div class="codehilite"><pre><span></span><span class="err">&#39;Authorization&#39;:</span> <span class="err">jwt</span> <span class="err">eyJ</span><span class="mi">0</span><span class="err">eXAiOiJKV</span><span class="mi">1</span><span class="err">QiLCJhbGciOiJIUzI</span><span class="mi">1</span><span class="err">NiJ</span><span class="mi">9</span><span class="err">.eyJ</span><span class="mi">1</span><span class="err">c</span><span class="mi">2</span><span class="err">VySWQiOiJiMDhmODZhZi</span><span class="mi">0</span><span class="err">zNWRhLTQ</span><span class="mi">4</span><span class="err">ZjItOGZhYi</span><span class="mi">1</span><span class="err">jZWYzOTA</span><span class="mi">0</span><span class="err">NjYwYmQifQ.-xN_h</span><span class="mi">82</span><span class="err">PHVTCMA</span><span class="mi">9</span><span class="err">vdoHrcZxH-x</span><span class="mi">5</span><span class="err">mb</span><span class="mi">11</span><span class="err">y</span><span class="mi">1537</span><span class="err">t</span><span class="mi">3</span><span class="err">rGzcM</span>
+<span class="err">&#39;x-api-key&#39;:</span>   <span class="err">a</span><span class="mi">9</span><span class="err">fb</span><span class="mi">4</span><span class="err">d</span><span class="mi">11</span><span class="err">bb</span><span class="mi">36466</span><span class="err">f</span><span class="mi">98</span><span class="err">b</span><span class="mi">2</span><span class="err">a</span><span class="mi">70</span><span class="err">fe</span><span class="mi">0</span><span class="err">fa</span><span class="mi">9</span><span class="err">aa</span><span class="mi">4</span>
+<span class="err">&#39;Content-Type&#39;:</span> <span class="err">application/json</span>
+</pre></div></p>
+<h2 id="sponsor-and-client-keys">Sponsor and Client Keys<a class="headerlink" href="#sponsor-and-client-keys" title="Permanent link">&para;</a></h2>
+<p>To make calls post authentication the token will need to contain a sponsor and client key
+If the correct sponsor or client key aren't provided the call will fail</p>
+<div class="codehilite"><pre><span></span>   <span class="err">Sponsor</span> <span class="err">Key:</span>  <span class="mf">24134e7</span><span class="err">d</span><span class="mi">7</span><span class="err">bf</span><span class="mf">345e4</span><span class="err">bded</span><span class="mf">4e9</span><span class="err">e</span><span class="mi">0858</span><span class="err">fd</span><span class="mi">6</span><span class="err">e</span>
+   <span class="err">Client</span> <span class="err">Key:</span> <span class="mi">9</span><span class="err">f</span><span class="mi">1</span><span class="err">a</span><span class="mi">3</span><span class="err">ea</span><span class="mf">4689345e7</span><span class="err">b</span><span class="mi">91</span><span class="err">f</span><span class="mf">2169e44</span><span class="err">a</span><span class="mi">3398</span>
+</pre></div>
+
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>In summary, for the VFS system to be compromised, the offending system or user would need to have the ability to produce a JWT Token with the known secret.  Additionally, they would need to know the correct API key, sponsor key and client key.  Even if they managed to obtain that information they would also need to know the correct product ID's associated with the sponsors client to make any impact.  Missing any of that information would result in a failed call.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../hierarchy/" title="Hierarchy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Hierarchy
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../glossary/" title="Glossary" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Glossary
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 NSN Solutions, Inc.
+          </div>
+        
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="None" class="md-footer-social__link fa fa-None"></a>
+    
+      <a href="None" class="md-footer-social__link fa fa-None"></a>
+    
+      <a href="None" class="md-footer-social__link fa fa-None"></a>
+    
+      <a href="None" class="md-footer-social__link fa fa-None"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.905597d0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
