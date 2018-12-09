@@ -19,7 +19,7 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: Readme
+site_name: Velma.io
 site_description: Documentation for the Velma API's
 site_author: NSN Solutions, Inc.
 #site_url: https://squidfunk.github.io/mkdocs-material/
@@ -53,13 +53,13 @@ theme:
   feature:
     tabs: true
   palette:
-    primary: Indigo
-    accent: Amber
+    primary: Blue
+    accent: Green
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/images/favicon.png
-  logo: 'images/Velma_Logo_no_tag.svg'
+  favicon: images/TrackerIcon.png
+  logo: 'images/TrackerIcon.png'
     #icon: "\uE80C"
 
 # Customization
@@ -104,23 +104,42 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Material: index.md
-  - Getting started: getting-started.md
-  - Extensions:
+  - Getting Started:
+    - Introduction: index.md
+    - API Reference: getting-started/api-reference.md
+    - Glossary: getting-started/glossary.md
+    - Hierarchy: getting-started/hierarchy.md
+    - Authentication: getting-started/authentication.md
+    - Generate a JWT: getting-started/generateJWT.md
+    - Command Packets: getting-started/commandpackets.md
+    - Command Packet Specs: getting-started/commandpacket-spec.md
+    - Command Packet Tokens: getting-started/commandpacket-tokens.md
+    - Command Packet Responses: getting-started/commandpacket-responses.md
+    - Response Codes: getting-started/commandpacket-responseCodes.md
+    - Callback Events: getting-started/callbackevents.md
+    - API Status Call: getting-started/api-statuscall.md
+  - Communication:
+    - Send Email: communication/sendemail.md
+    - Theme: communication/theme.md
+    - Getting started: getting-started.md
+    - Specimen: specimen.md
+    - Specimen2: extensions/admonition.md
+    - Customization: customization.md
+    - Compliance with GDPR: compliance.md
+    - Release notes: release-notes.md
+    - Author's notes: authors-notes.md
+    - Contributing: contributing.md
+    - License: license.md
+  - Libraries:
     - Admonition: extensions/admonition.md
     - CodeHilite: extensions/codehilite.md
     - Footnotes: extensions/footnotes.md
     - Metadata: extensions/metadata.md
     - Permalinks: extensions/permalinks.md
     - PyMdown: extensions/pymdown.md
-  - Specimen: specimen.md
-  - Specimen2: extensions/admonition.md
-  - Customization: customization.md
-  - Compliance with GDPR: compliance.md
-  - Release notes: release-notes.md
-  - Author's notes: authors-notes.md
-  - Contributing: contributing.md
-  - License: license.md
+  - Examples:
+    - Sending an Email: example/index.md
+
 
 # Google Analytics
 google_analytics:

@@ -1,0 +1,5 @@
+# API Reference
+
+The VFS API is organized around REST. Our API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients. We support cross-origin resource sharing, allowing you to interact securely with our API from a client-side web application (though you should never expose your secret API key in any public website's client-side code). JSON is returned by all API responses, including errors.
+
+To make the API as explorable as possible, a demo mode is provided with keys and a library for testing out the system.  Subsequent to on-boarding, you will be provided a beta and live sets of keys.  There is no "switch" for changing between modes, just use the appropriate keys and endpoints to perform a live or test request.  For orders that incur a cost, like print and mail, if the requests are made with demo or beta mode credentials, actual charges will not be run and live orders will not be placed.

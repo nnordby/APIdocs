@@ -1,45 +1,21 @@
-# Material <small>for MkDocs</small>
+!!! quote "**Our mission is to help organizations grow and thrive by providing intelligent engagement solutions.**"
 
-## Create beautiful project documentation
+Velma.io is an intelligent engagement toolkit for applications or services.  Each tool can be invoked separately, or as part of an orchestrated communication strategy.
 
-Material is a theme for [MkDocs][1], an excellent static site generator geared
-towards project documentation. It is built using Google's [Material Design][2]
-guidelines.
+**[Velma.io](https://www.meetvelma.com/products/vfs)** is home to the Velma Fulfillment System, otherwise known as VFS.  The information on this site has been organized around supporting two primary users:
 
-[![Material for MkDocs](assets/images/material.png)](assets/images/material.png)
+1. Solution Developers
+2. Communication Administrators <small>([Get Started Here][1])</small>
+[1]: /extensions/admonition/
 
-  [1]: https://www.mkdocs.org
-  [2]: https://material.io/guidelines/material-design/
+The information should be both technical but practical for all readers.  [Postman][1] collections are available throughout the site when more in-depth technical information is required.
 
-## Quick start
+<figure>
+    <img src='images/Velma.png' style="max-width: 500px;">
+    <figcaption><small>Velma.io Admin Dashboard</small></figcaption>
+</figure>
 
-Install the latest version of Material with `pip`:
 
-``` sh
-pip install mkdocs-material
-```
+The **[Velma application](https://www.velma.com)** is a marketing platform built around VFS which provides marketing capabilities to Enterprise Mortgage Banks and brokers and takes advantage of cross-media marketing capabilities; which include: physical print and mailing service, robust authenticated email, SMS, self print (desktop print), and personal gift fulfillment, all with the same convenience of simple API calls invoked from the client application.  The purpose of VFS is to provide a world-class fulfillment capability to applications whose primary mission focuses on other priorities but recognizes the value and need for these capabilities.
 
-Append the following line to your project's `mkdocs.yml`:
-
-``` yaml
-theme:
-  name: 'material'
-```
-
-## What to expect
-
-* Responsive design and fluid layout for all kinds of screens and devices,
-  designed to serve your project documentation in a user-friendly way in 34
-  languages with optimal readability.
-
-* Easily customizable primary and accent color, fonts, favicon and logo;
-  straight forward localization through theme extension; integrated with Google
-  Analytics, Disqus and GitHub.
-
-* Well-designed search interface accessible through hotkeys (<kbd>F</kbd> or
-  <kbd>S</kbd>), intelligent grouping of search results, search term
-  highlighting and lazy loading.
-
-For detailed instructions see the [getting started guide][3].
-
-  [3]: getting-started.md
+[1]: getting-started/glossary.md
