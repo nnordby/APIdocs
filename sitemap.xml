@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>https://readme.velma.io/getting-started/introduction/</loc>
+     <loc>https://readme.velma.io/</loc>
      <lastmod>2018-12-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/api-reference/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/getting-started/glossary/</loc>
      <lastmod>2018-12-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -21,17 +26,72 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://readme.velma.io/getting-started/glossary/</loc>
+     <loc>https://readme.velma.io/getting-started/generateJWT/</loc>
      <lastmod>2018-12-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://readme.velma.io/</loc>
+     <loc>https://readme.velma.io/getting-started/commandpackets/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/getting-started/commandpacket-spec/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/getting-started/commandpacket-tokens/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/communication/theme/</loc>
      <lastmod>2018-12-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/specimen/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/extensions/admonition/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/customization/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/compliance/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/release-notes/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/authors-notes/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/contributing/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/license/</loc>
      <lastmod>2018-12-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -66,37 +126,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://readme.velma.io/specimen/</loc>
-     <lastmod>2018-12-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://readme.velma.io/customization/</loc>
-     <lastmod>2018-12-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://readme.velma.io/compliance/</loc>
-     <lastmod>2018-12-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://readme.velma.io/release-notes/</loc>
-     <lastmod>2018-12-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://readme.velma.io/authors-notes/</loc>
-     <lastmod>2018-12-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://readme.velma.io/contributing/</loc>
-     <lastmod>2018-12-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://readme.velma.io/license/</loc>
+     <loc>https://readme.velma.io/example/</loc>
      <lastmod>2018-12-08</lastmod>
      <changefreq>daily</changefreq>
     </url>

@@ -1,0 +1,1266 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for the Velma API's">
+      
+      
+        <link rel="canonical" href="https://readme.velma.io/getting-started/commandpackets/">
+      
+      
+        <meta name="author" content="NSN Solutions, Inc.">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../images/TrackerIcon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>Command Packets - Velma.io</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#nodes" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://readme.velma.io" title="Velma.io" class="md-header-nav__button md-logo">
+          
+            <img src="../../images/TrackerIcon.png" width="40" height="40" style="margin-top: -5px;">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Velma.io
+              </span>
+              <span class="md-header-nav__topic">
+                Command Packets
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." title="Getting Started" class="md-tabs__link md-tabs__link--active">
+          Getting Started
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../communication/theme/" title="Communication" class="md-tabs__link">
+          Communication
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../extensions/admonition/" title="Libraries" class="md-tabs__link">
+          Libraries
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../example/" title="Examples" class="md-tabs__link">
+          Examples
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://readme.velma.io" title="Velma.io" class="md-nav__button md-logo">
+      
+        <img src="../../images/TrackerIcon.png" width="48" height="48">
+      
+    </a>
+    Velma.io
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api-reference/" title="API Reference" class="md-nav__link">
+      API Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hierarchy/" title="Hierarchy" class="md-nav__link">
+      Hierarchy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../authentication/" title="Authentication" class="md-nav__link">
+      Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../generateJWT/" title="Generate a JWT" class="md-nav__link">
+      Generate a JWT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Command Packets
+      </label>
+    
+    <a href="./" title="Command Packets" class="md-nav__link md-nav__link--active">
+      Command Packets
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nodes" title="Nodes" class="md-nav__link">
+    Nodes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-email-command-packet" title="Sample Email Command Packet" class="md-nav__link">
+    Sample Email Command Packet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#products" title="Products" class="md-nav__link">
+    Products
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-packet-products" title="Command Packet &amp; Products" class="md-nav__link">
+    Command Packet &amp; Products
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-tokens" title="Simple Tokens" class="md-nav__link">
+    Simple Tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smart-tokens" title="Smart Tokens" class="md-nav__link">
+    Smart Tokens
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" title="Use Cases" class="md-nav__link">
+    Use Cases
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-to-one-communication-transactional" title="One-to-One Communication (Transactional)" class="md-nav__link">
+    One-to-One Communication (Transactional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample" title="# Sample" class="md-nav__link">
+    # Sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-to-many-marketing" title="One to many (Marketing)" class="md-nav__link">
+    One to many (Marketing)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../commandpacket-spec/" title="Command Packet Specs" class="md-nav__link">
+      Command Packet Specs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../commandpacket-tokens/" title="Command Packet Tokens" class="md-nav__link">
+      Command Packet Tokens
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Communication
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Communication
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../communication/theme/" title="Theme" class="md-nav__link">
+      Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../specimen/" title="Specimen" class="md-nav__link">
+      Specimen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/admonition/" title="Specimen2" class="md-nav__link">
+      Specimen2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customization/" title="Customization" class="md-nav__link">
+      Customization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../compliance/" title="Compliance with GDPR" class="md-nav__link">
+      Compliance with GDPR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/" title="Release notes" class="md-nav__link">
+      Release notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../authors-notes/" title="Author's notes" class="md-nav__link">
+      Author's notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Libraries
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Libraries
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/admonition/" title="Admonition" class="md-nav__link">
+      Admonition
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/codehilite/" title="CodeHilite" class="md-nav__link">
+      CodeHilite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/footnotes/" title="Footnotes" class="md-nav__link">
+      Footnotes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/metadata/" title="Metadata" class="md-nav__link">
+      Metadata
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/permalinks/" title="Permalinks" class="md-nav__link">
+      Permalinks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/pymdown/" title="PyMdown" class="md-nav__link">
+      PyMdown
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Examples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Examples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/" title="Sending an Email" class="md-nav__link">
+      Sending an Email
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nodes" title="Nodes" class="md-nav__link">
+    Nodes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-email-command-packet" title="Sample Email Command Packet" class="md-nav__link">
+    Sample Email Command Packet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#products" title="Products" class="md-nav__link">
+    Products
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-packet-products" title="Command Packet &amp; Products" class="md-nav__link">
+    Command Packet &amp; Products
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-tokens" title="Simple Tokens" class="md-nav__link">
+    Simple Tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smart-tokens" title="Smart Tokens" class="md-nav__link">
+    Smart Tokens
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" title="Use Cases" class="md-nav__link">
+    Use Cases
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-to-one-communication-transactional" title="One-to-One Communication (Transactional)" class="md-nav__link">
+    One-to-One Communication (Transactional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample" title="# Sample" class="md-nav__link">
+    # Sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-to-many-marketing" title="One to many (Marketing)" class="md-nav__link">
+    One to many (Marketing)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Command Packets</h1>
+                
+                <p>Command Packets are at the core of all jobs in Velma.io.</p>
+<p>They contain all of the data and instructions that  Velma.io needs to provide intelligent communication.</p>
+<h3 id="nodes">Nodes<a class="headerlink" href="#nodes" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Type - Tells Velma.io what type of job we are sending it.</li>
+<li>Authentication - Who is sending it.</li>
+<li>Product - Which product it is going to work with.</li>
+<li>Email - The source of the communication. (Print, SMS, Etc)</li>
+<li>User - The senders data. (Also referred to as user tokens)</li>
+<li>Contact - The recipients data.  (Also referred to as contact tokens)</li>
+<li>Template - Document specific data</li>
+</ol>
+<h4 id="sample-email-command-packet">Sample Email Command Packet<a class="headerlink" href="#sample-email-command-packet" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.7&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;email&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;authentication&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;sponsorkey&quot;</span><span class="p">:</span> <span class="s2">&quot;1234&quot;</span>
+        <span class="s2">&quot;clientkey&quot;</span><span class="p">:</span> <span class="s2">&quot;abcd&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;subject&quot;</span><span class="p">:</span> <span class="s2">&quot;My subject Line&quot;</span>
+        <span class="s2">&quot;from&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John Public&quot;</span>
+            <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;jobhnpublic@velma.io&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;product&quot;</span><span class="p">:</span> <span class="s2">&quot;</span>
+<span class="s2">        &quot;</span><span class="err">id</span><span class="s2">&quot;: &quot;</span><span class="mi">123</span><span class="s2">&quot;</span>
+<span class="s2">    &quot;</span><span class="p">,</span>
+    <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;loanAmount&quot;</span><span class="p">:</span> <span class="s2">&quot;250000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;loanInterestRate&quot;</span><span class="p">:</span> <span class="s2">&quot;5.8%&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;loanDownPayment&quot;</span><span class="p">:</span> <span class="mi">20000</span><span class="s2">&quot;</span>
+<span class="s2">    }.</span>
+<span class="s2">    &quot;</span><span class="err">user</span><span class="s2">&quot;: {</span>
+<span class="s2">        &quot;</span><span class="err">zip</span><span class="s2">&quot;: &quot;</span><span class="mi">83686</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;</span><span class="err">firstName</span><span class="s2">&quot;: &quot;</span><span class="err">John</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;</span><span class="err">lastName</span><span class="s2">&quot;: &quot;</span><span class="err">Public</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;</span><span class="err">fullName</span><span class="s2">&quot;: &quot;</span><span class="err">John</span> <span class="err">Public</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;</span><span class="err">address</span><span class="mi">2</span><span class="s2">&quot;: &quot;</span><span class="err">Suite</span> <span class="mi">200</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;</span><span class="err">city</span><span class="s2">&quot;: &quot;</span><span class="err">Nampa</span><span class="s2">&quot;</span>
+<span class="s2">    },</span>
+<span class="s2">    contact&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+         <span class="nt">&quot;appuniqueid&quot;</span><span class="p">:</span> <span class="s2">&quot;abc&quot;</span>
+         <span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Nate&quot;</span>
+         <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;Public&quot;</span>
+         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Nate Public&quot;</span>
+         <span class="s2">&quot;phone&quot;</span><span class="p">:</span> <span class="s2">&quot;555-1234&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+         <span class="nt">&quot;appuniqueid&quot;</span><span class="p">:</span> <span class="s2">&quot;def&quot;</span>
+         <span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Greg&quot;</span>
+         <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;Public&quot;</span>
+         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Greg Public&quot;</span>
+         <span class="s2">&quot;phone&quot;</span><span class="p">:</span> <span class="s2">&quot;555-1235&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+         <span class="nt">&quot;appuniqueid&quot;</span><span class="p">:</span> <span class="s2">&quot;ghi&quot;</span>
+         <span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Dave&quot;</span>
+         <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;Public&quot;</span>
+         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Dave Public&quot;</span>
+         <span class="s2">&quot;phone&quot;</span><span class="p">:</span> <span class="s2">&quot;555-1236&quot;</span>
+      <span class="p">}</span>  
+    <span class="p">]</span>      
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="products">Products<a class="headerlink" href="#products" title="Permanent link">&para;</a></h3>
+<p>Products are the communication assets in Velma.io.</p>
+<p>They are HTML and/or text which, when invoked by a command packet, can intelligently transform themselves into a robust communication message tailored for each senders targeted recipient(s).</p>
+<p><small>Simple Happy Birthday Email</small></p>
+<p><img alt="enter image description here" src="https://s3-us-west-2.amazonaws.com/vfs-docs/APIDocs/Simple+-+Email+Workflow/SimpleEmail.jpg" /></p>
+<h3 id="command-packet-products">Command Packet &amp; Products<a class="headerlink" href="#command-packet-products" title="Permanent link">&para;</a></h3>
+<p>The command packet data and the product tokens are used in two ways:</p>
+<ol>
+<li>Tokens are replaced by the data in the command packet.</li>
+<li>The data is used to dynamically transform the product.</li>
+</ol>
+<h4 id="simple-tokens">Simple Tokens<a class="headerlink" href="#simple-tokens" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>{{user.fullname}}
+{{user.title}}
+</pre></div>
+
+<h4 id="smart-tokens">Smart Tokens<a class="headerlink" href="#smart-tokens" title="Permanent link">&para;</a></h4>
+<p>These are tokens that show based on the existence of a value.</p>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">vf-show</span><span class="o">=</span><span class="s">&quot;user.fullname&quot;</span><span class="p">&gt;</span>
+    Hi <span class="p">&lt;</span><span class="nt">span</span> <span class="na">vf-var</span><span class="o">=</span><span class="s">&quot;user.fullname&quot;</span><span class="p">&gt;</span>John Smith<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>What this means is that you must construct the product to facilitate your custom communication.</p>
+</div>
+<h5 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h5>
+<p>There are really two distinct types of use cases.</p>
+<h6 id="one-to-one-communication-transactional">One-to-One Communication (Transactional)<a class="headerlink" href="#one-to-one-communication-transactional" title="Permanent link">&para;</a></h6>
+<p>The setup of the product is designed to target its contact or contacts based solely on the data outside the contact node.</p>
+<div class="admonition tldr">
+<p class="admonition-title">Explained</p>
+<p>Say you are sending loan information from John to Nate . In this case your desired communication product will need to be built based on the data in the <strong>user</strong> <em>and</em> <strong>template</strong> nodes..</p>
+</div>
+<h6 id="sample"># Sample<a class="headerlink" href="#sample" title="Permanent link">&para;</a></h6>
+<div class="codehilite"><pre><span></span>Your new house <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{user.housePic}}&quot;</span><span class="err">.</span>
+
+<span class="na">Hi</span><span class="err">,</span> <span class="na">this</span> <span class="na">is</span> <span class="err">{{</span><span class="na">user</span><span class="err">.</span><span class="na">firstName</span><span class="err">}},</span> <span class="na">I</span> <span class="na">just</span> <span class="na">wanted</span> <span class="na">to</span> <span class="na">tell</span> <span class="na">you</span> <span class="na">the</span> <span class="na">exciting</span> <span class="na">news</span> <span class="na">that</span> <span class="na">your</span>
+<span class="na">loan</span> <span class="na">amount</span> <span class="na">of</span> <span class="err">{{</span><span class="na">template</span><span class="err">.</span><span class="na">loanAmount</span><span class="err">}}</span> <span class="na">with</span> <span class="na">a</span> <span class="na">down</span> <span class="na">payment</span> <span class="na">of</span> <span class="err">{{</span><span class="na">template</span><span class="err">.</span><span class="na">loanDownPayment</span><span class="err">}}</span>
+<span class="na">is</span> <span class="na">currently</span> <span class="na">in</span> <span class="na">the</span> <span class="na">status</span> <span class="na">of</span> <span class="err">{{</span><span class="na">template</span><span class="err">.</span><span class="na">loanStatus</span><span class="err">}}.</span>
+
+<span class="na">Sincerely</span><span class="err">,</span>
+<span class="err">{{</span><span class="na">user</span><span class="err">.</span><span class="na">fullName</span><span class="err">}}</span>
+<span class="err">{{</span><span class="na">user</span><span class="err">.</span><span class="na">company</span><span class="err">}}</span>
+<span class="err">{{</span><span class="na">user</span><span class="err">.</span><span class="na">companyPositive</span><span class="err">}}</span>
+</pre></div>
+
+<p>This would render as:</p>
+<div class="codehilite"><pre><span></span>Pretty House Picture here.
+
+Hi, this is John, I just wanted to tell you the exciting news that your
+loan amount of $250,000 with a down payment of $20,000
+is currently in the status of Final Processing.
+
+Sincerely,
+John Public
+XYZ Mortgage
+Making your dreams a reality
+</pre></div>
+
+<div class="admonition note">
+<p>The important thing to note here is that even though in the command packet there are two contacts, the messaging is designed around the information related to contact one (Nate) and the second contact (Greg) is really just CC'd communication.</p>
+</div>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;&lt;Other Nodes&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;83686&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;firstName&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;lastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;fullName&quot;</span><span class="p">:</span> <span class="s2">&quot;John Public&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;company&quot;</span><span class="p">:</span> <span class="s2">&quot;xyx Mortgage&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;companyPositive&quot;</span><span class="p">:</span> <span class="s2">&quot;Making your dreams a reality&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;address2&quot;</span><span class="p">:</span> <span class="s2">&quot;Suite 200&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Nampa&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;housePic&quot;</span><span class="p">:</span> <span class="s2">&quot;https://userdata.prettypic.jpg&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;loanAmount&quot;</span><span class="p">:</span> <span class="s2">&quot;250000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;loanInterestRate&quot;</span><span class="p">:</span> <span class="s2">&quot;5.8%&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;loanDownPayment&quot;</span><span class="p">:</span> <span class="mi">20000</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;</span><span class="err">loanStatus</span><span class="s2">&quot;: &quot;</span><span class="err">finalProcessing</span><span class="s2">&quot;</span>
+<span class="s2">    }.</span>
+<span class="s2">    contact&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+         <span class="nt">&quot;appuniqueid&quot;</span><span class="p">:</span> <span class="s2">&quot;abc&quot;</span>
+         <span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Nate&quot;</span>
+         <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;Borrower&quot;</span>
+         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Nate Public&quot;</span>
+         <span class="s2">&quot;phone&quot;</span><span class="p">:</span> <span class="s2">&quot;555-1234&quot;</span><span class="p">,</span>
+         <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="err">nate@gmail.com</span><span class="s2">&quot;</span>
+<span class="s2">      },</span>
+<span class="s2">      {</span>
+<span class="s2">         &quot;</span><span class="err">appuniqueid</span><span class="s2">&quot;: &quot;</span><span class="err">def</span><span class="s2">&quot;</span>
+<span class="s2">         &quot;</span><span class="err">firstname</span><span class="s2">&quot;: &quot;</span><span class="err">Greg</span><span class="s2">&quot;</span>
+<span class="s2">         &quot;</span><span class="err">lastname</span><span class="s2">&quot;: &quot;</span><span class="err">Co-Borrower</span><span class="s2">&quot;</span>
+<span class="s2">         &quot;</span><span class="err">name</span><span class="s2">&quot;: &quot;</span><span class="err">Greg</span> <span class="err">Co-Borrower</span><span class="s2">&quot;</span>
+<span class="s2">         &quot;</span><span class="err">phone</span><span class="s2">&quot;: &quot;</span><span class="mi">555-1234</span><span class="s2">&quot;,</span>
+<span class="s2">         &quot;</span><span class="err">email</span><span class="s2">&quot;: &quot;</span><span class="err">greg@gmail.com&quot;</span>
+      <span class="p">}</span>
+
+    <span class="p">]</span>      
+<span class="p">}</span>
+</pre></div>
+
+<h6 id="one-to-many-marketing">One to many (Marketing)<a class="headerlink" href="#one-to-many-marketing" title="Permanent link">&para;</a></h6>
+<p>The setup of the product is designed to target many contacts.</p>
+<div class="admonition tldr">
+<p class="admonition-title">Explained</p>
+<p>Say you are sending an information  type marketing email to many contacts. In this case your desired communication product will need to be built based on the data in the contact node.</p>
+</div>
+<p><strong><em>Example Messaging</em></strong></p>
+<p>&nbsp;
+&nbsp;  </p>
+<p><div class="codehilite"><pre><span></span>House &lt;img src=&quot;{{user.housePic}}&quot;.
+
+Hi {{contact.firstName}}, this is {{user.firstName}}, I just wanted to let you know that a new residence has become available, it is in a nice suburban area of town. View the details here {{user.houseDetails}}   
+
+Yours Truly {{user.fullName}}
+{{user.company}}
+{{user.companyPositive}}
+</pre></div>
+&nbsp;
+&nbsp;  </p>
+<p>This would translate to 3 emails</p>
+<p>&nbsp;
+&nbsp;<br />
+<div class="codehilite"><pre><span></span>House &quot;House Picture here&quot;
+
+Hi Nate or Nate or Greg, this is John, I just wanted to let you know that a new residence has become available, it is in a nice suburban area of town. View the details here https://userdata.housedetails.html   
+
+Yours Truly John Public
+XYZ Mortgage
+Making your dreams a reality
+</pre></div>
+&nbsp;
+&nbsp;  </p>
+<p><strong>The imporant thing to note is that the messaging is targeting all three contacts&gt;</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;&lt;Other Nodes&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;83686&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;firstName&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;lastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;fullName&quot;</span><span class="p">:</span> <span class="s2">&quot;John Public&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;company&quot;</span><span class="p">:</span> <span class="s2">&quot;xyx Mortgage&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;companyPositive&quot;</span><span class="p">:</span> <span class="s2">&quot;Making your dreams a reality&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;address2&quot;</span><span class="p">:</span> <span class="s2">&quot;Suite 200&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Nampa&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;houseDetails&quot;</span><span class="p">:</span> <span class="s2">&quot;https://userdata.housedetails.html&quot;</span><span class="err">.</span>
+        <span class="s2">&quot;housePic&quot;</span><span class="p">:</span> <span class="s2">&quot;https://userdata.prettypic.jpg&quot;</span>
+    <span class="p">},</span>
+    <span class="err">contact</span><span class="nt">&quot;: [</span>
+<span class="nt">      {</span>
+<span class="nt">         &quot;</span><span class="err">appuniqueid</span><span class="s2">&quot;: &quot;</span><span class="err">abc</span><span class="s2">&quot;</span>
+<span class="s2">         &quot;</span><span class="err">firstname</span><span class="s2">&quot;: &quot;</span><span class="err">Nate</span><span class="s2">&quot;</span>
+<span class="s2">         &quot;</span><span class="err">lastname</span><span class="s2">&quot;: &quot;</span><span class="err">Borrower</span><span class="s2">&quot;</span>
+<span class="s2">         &quot;</span><span class="err">name</span><span class="s2">&quot;: &quot;</span><span class="err">Nate</span> <span class="err">Borrower</span><span class="s2">&quot;</span>
+<span class="s2">         &quot;</span><span class="err">phone</span><span class="s2">&quot;: &quot;</span><span class="mi">555-1234</span><span class="s2">&quot;,</span>
+<span class="s2">         &quot;</span><span class="err">email</span><span class="s2">&quot;: nate@gmail.com&quot;</span>
+         <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;loanAmount&quot;</span><span class="p">:</span> <span class="s2">&quot;250001&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;loanInterestRate&quot;</span><span class="p">:</span> <span class="s2">&quot;5.1%&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;loanDownPayment&quot;</span><span class="p">:</span> <span class="mi">20001</span><span class="s2">&quot;,</span>
+<span class="s2">                &quot;</span><span class="err">loanStatus</span><span class="s2">&quot;: &quot;</span><span class="err">finalProcessing</span><span class="s2">&quot;</span>
+<span class="s2">         }.</span>
+<span class="s2">      },</span>
+<span class="s2">      {</span>
+<span class="s2">         &quot;</span><span class="err">appuniqueid</span><span class="s2">&quot;: &quot;</span><span class="err">def</span><span class="s2">&quot;</span>
+<span class="s2">         &quot;</span><span class="err">firstname</span><span class="s2">&quot;: &quot;</span><span class="err">Greg</span><span class="s2">&quot;</span>
+<span class="s2">         &quot;</span><span class="err">lastname</span><span class="s2">&quot;: &quot;</span><span class="err">Public</span><span class="s2">&quot;</span>
+<span class="s2">         &quot;</span><span class="err">name</span><span class="s2">&quot;: &quot;</span><span class="err">Borrower</span><span class="s2">&quot;</span>
+<span class="s2">         &quot;</span><span class="err">phone</span><span class="s2">&quot;: &quot;</span><span class="mi">555-1235</span><span class="s2">&quot;,</span>
+<span class="s2">         &quot;</span><span class="err">email</span><span class="s2">&quot;: &quot;</span><span class="err">greg@gmail.com</span><span class="s2">&quot;</span>
+<span class="s2">         &quot;</span><span class="err">template</span><span class="s2">&quot;: {</span>
+<span class="s2">                &quot;</span><span class="err">loanAmount</span><span class="s2">&quot;: &quot;</span><span class="mi">250002</span><span class="s2">&quot;,</span>
+<span class="s2">                &quot;</span><span class="err">loanInterestRate</span><span class="s2">&quot;: &quot;</span><span class="mf">5.2</span><span class="err">%</span><span class="s2">&quot;,</span>
+<span class="s2">                &quot;</span><span class="err">loanDownPayment</span><span class="s2">&quot;: 20002&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;loanStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;finalProcessing&quot;</span>
+         <span class="p">}</span>
+      <span class="p">}</span><span class="err">,</span>
+      <span class="p">{</span>
+         <span class="nt">&quot;appuniqueid&quot;</span><span class="p">:</span> <span class="s2">&quot;def&quot;</span>
+         <span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Dave&quot;</span>
+         <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;Borrower&quot;</span>
+         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Dave Borrower&quot;</span>
+         <span class="s2">&quot;phone&quot;</span><span class="p">:</span> <span class="s2">&quot;555-1236&quot;</span><span class="p">,</span>
+         <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;dave@gmail.com&quot;</span><span class="p">,</span>
+         <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;loanAmount&quot;</span><span class="p">:</span> <span class="s2">&quot;250003&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;loanInterestRate&quot;</span><span class="p">:</span> <span class="s2">&quot;5.3%&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;loanDownPayment&quot;</span><span class="p">:</span> <span class="mi">20003</span><span class="s2">&quot;,</span>
+<span class="s2">                &quot;</span><span class="err">loanStatus</span><span class="s2">&quot;: &quot;</span><span class="err">finalProcessing&quot;</span>
+         <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="err">]</span>      
+<span class="err">}</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../generateJWT/" title="Generate a JWT" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Generate a JWT
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../commandpacket-spec/" title="Command Packet Specs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Command Packet Specs
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 NSN Solutions, Inc.
+          </div>
+        
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="None" class="md-footer-social__link fa fa-None"></a>
+    
+      <a href="None" class="md-footer-social__link fa fa-None"></a>
+    
+      <a href="None" class="md-footer-social__link fa fa-None"></a>
+    
+      <a href="None" class="md-footer-social__link fa fa-None"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.905597d0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

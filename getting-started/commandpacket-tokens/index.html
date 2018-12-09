@@ -13,7 +13,7 @@
         <meta name="description" content="Documentation for the Velma API's">
       
       
-        <link rel="canonical" href="https://readme.velma.io/extensions/permalinks/">
+        <link rel="canonical" href="https://readme.velma.io/getting-started/commandpacket-tokens/">
       
       
         <meta name="author" content="NSN Solutions, Inc.">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Permalinks - Velma.io</title>
+        <title>Command Packet Tokens - Velma.io</title>
       
     
     
@@ -86,7 +86,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#permalinks" tabindex="1" class="md-skip">
+      <a href="#supported-tags" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -112,7 +112,7 @@
                 Velma.io
               </span>
               <span class="md-header-nav__topic">
-                Permalinks
+                Command Packet Tokens
               </span>
             
           
@@ -171,7 +171,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../.." title="Getting Started" class="md-tabs__link">
+        <a href="../.." title="Getting Started" class="md-tabs__link md-tabs__link--active">
           Getting Started
         </a>
       
@@ -197,7 +197,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../admonition/" title="Libraries" class="md-tabs__link md-tabs__link--active">
+        <a href="../../extensions/admonition/" title="Libraries" class="md-tabs__link">
           Libraries
         </a>
       
@@ -245,10 +245,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       Getting Started
@@ -278,7 +280,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting-started/api-reference/" title="API Reference" class="md-nav__link">
+    <a href="../api-reference/" title="API Reference" class="md-nav__link">
       API Reference
     </a>
   </li>
@@ -290,7 +292,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting-started/glossary/" title="Glossary" class="md-nav__link">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
       Glossary
     </a>
   </li>
@@ -302,7 +304,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting-started/hierarchy/" title="Hierarchy" class="md-nav__link">
+    <a href="../hierarchy/" title="Hierarchy" class="md-nav__link">
       Hierarchy
     </a>
   </li>
@@ -314,7 +316,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting-started/authentication/" title="Authentication" class="md-nav__link">
+    <a href="../authentication/" title="Authentication" class="md-nav__link">
       Authentication
     </a>
   </li>
@@ -326,7 +328,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting-started/generateJWT/" title="Generate a JWT" class="md-nav__link">
+    <a href="../generateJWT/" title="Generate a JWT" class="md-nav__link">
       Generate a JWT
     </a>
   </li>
@@ -338,7 +340,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting-started/commandpackets/" title="Command Packets" class="md-nav__link">
+    <a href="../commandpackets/" title="Command Packets" class="md-nav__link">
       Command Packets
     </a>
   </li>
@@ -350,7 +352,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting-started/commandpacket-spec/" title="Command Packet Specs" class="md-nav__link">
+    <a href="../commandpacket-spec/" title="Command Packet Specs" class="md-nav__link">
       Command Packet Specs
     </a>
   </li>
@@ -360,11 +362,80 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../getting-started/commandpacket-tokens/" title="Command Packet Tokens" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Command Packet Tokens
+      </label>
+    
+    <a href="./" title="Command Packet Tokens" class="md-nav__link md-nav__link--active">
       Command Packet Tokens
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-tags" title="Supported Tags" class="md-nav__link">
+    Supported Tags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legacy-tokens" title="Legacy Tokens" class="md-nav__link">
+    Legacy Tokens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-token" title="Insert Token" class="md-nav__link">
+    Insert Token
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replace-token" title="Replace Token" class="md-nav__link">
+    Replace Token
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vfs-variables-vf-var" title="VFS Variables (vf-var)" class="md-nav__link">
+    VFS Variables (vf-var)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-handling" title="Special Handling" class="md-nav__link">
+    Special Handling
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -410,7 +481,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting-started/" title="Getting started" class="md-nav__link">
+    <a href="../" title="Getting started" class="md-nav__link">
       Getting started
     </a>
   </li>
@@ -434,7 +505,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../admonition/" title="Specimen2" class="md-nav__link">
+    <a href="../../extensions/admonition/" title="Specimen2" class="md-nav__link">
       Specimen2
     </a>
   </li>
@@ -521,12 +592,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Libraries
@@ -544,7 +613,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../admonition/" title="Admonition" class="md-nav__link">
+    <a href="../../extensions/admonition/" title="Admonition" class="md-nav__link">
       Admonition
     </a>
   </li>
@@ -556,7 +625,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../codehilite/" title="CodeHilite" class="md-nav__link">
+    <a href="../../extensions/codehilite/" title="CodeHilite" class="md-nav__link">
       CodeHilite
     </a>
   </li>
@@ -568,7 +637,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../footnotes/" title="Footnotes" class="md-nav__link">
+    <a href="../../extensions/footnotes/" title="Footnotes" class="md-nav__link">
       Footnotes
     </a>
   </li>
@@ -580,7 +649,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../metadata/" title="Metadata" class="md-nav__link">
+    <a href="../../extensions/metadata/" title="Metadata" class="md-nav__link">
       Metadata
     </a>
   </li>
@@ -590,56 +659,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Permalinks
-      </label>
-    
-    <a href="./" title="Permalinks" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../extensions/permalinks/" title="Permalinks" class="md-nav__link">
       Permalinks
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" title="Installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -649,7 +673,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../pymdown/" title="PyMdown" class="md-nav__link">
+    <a href="../../extensions/pymdown/" title="PyMdown" class="md-nav__link">
       PyMdown
     </a>
   </li>
@@ -710,22 +734,48 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" title="Installation" class="md-nav__link">
-    Installation
+  <a href="#supported-tags" title="Supported Tags" class="md-nav__link">
+    Supported Tags
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
+  <a href="#legacy-tokens" title="Legacy Tokens" class="md-nav__link">
+    Legacy Tokens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-token" title="Insert Token" class="md-nav__link">
+    Insert Token
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replace-token" title="Replace Token" class="md-nav__link">
+    Replace Token
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vfs-variables-vf-var" title="VFS Variables (vf-var)" class="md-nav__link">
+    VFS Variables (vf-var)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-handling" title="Special Handling" class="md-nav__link">
+    Special Handling
   </a>
   
 </li>
@@ -747,29 +797,76 @@
               
                 
                 
-                <h1 id="permalinks">Permalinks<a class="headerlink" href="#permalinks" title="Permanent link">&para;</a></h1>
-<p>Permalinks are a feature of the <a href="https://python-markdown.github.io/extensions/toc/">Table of Contents</a> extension, which is part
-of the standard Markdown library. The extension inserts an anchor at the end of
-each headline, which makes it possible to directly link to a subpart of the
-document.</p>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<p>To enable permalinks, add the following to your <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">toc</span><span class="p p-Indicator">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">permalink</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+                  <h1>Command Packet Tokens</h1>
+                
+                <h3 id="supported-tags">Supported Tags<a class="headerlink" href="#supported-tags" title="Permanent link">&para;</a></h3>
+<p>This document describes the new vf-vars and token operations now supported by the token service.  Note the vfvar (no hyphen) tokens are separate and not impacted by the vf-vars.</p>
+<h3 id="legacy-tokens">Legacy Tokens<a class="headerlink" href="#legacy-tokens" title="Permanent link">&para;</a></h3>
+<p>There are 2 legacy tokens supported by the tokenService:
+- <strong>Insert Token</strong>: <code>@@TOKEN@@</code>
+- <strong>Replace Token</strong>: <code>{{TOKEN}}</code></p>
+<h3 id="insert-token">Insert Token<a class="headerlink" href="#insert-token" title="Permanent link">&para;</a></h3>
+<p>The insert token is used to pull data from a URL and place it into the active document.  The operations starts by finding the token. The search pattern is <code>@@[a-zA-Z0-9._-]+@@</code>. The value between the <code>@@</code> symbols are used to lookup a value in the <em>command packet</em> sent with the request.  </p>
+<p>It is expected that the value in the <em>command packet</em> will be a URL. The system will fetch the content of that url and then replace the token, including the <code>@@</code> symbols.</p>
+<p><strong>Example:</strong></p>
+<div class="codehilite"><pre><span></span>&lt;div&gt;@@document.contactArea@@&lt;/div&gt;
 </pre></div>
 
-<p>This will add a link containing the paragraph symbol <code>¶</code> at the end of each
-headline (exactly like on the page you're currently viewing), which the
-Material theme will make appear on hover. In order to change the text of the
-permalink, a string can be passed, e.g.:</p>
-<div class="codehilite"><pre><span></span>markdown_extensions:
-  - toc:
-      permalink: Link
+<h3 id="replace-token">Replace Token<a class="headerlink" href="#replace-token" title="Permanent link">&para;</a></h3>
+<p>The replace token is used to put data from a command packet into the active document. The operation starts by finding the token. The search pattern is <code>{{[a-zA-Z0-9._-]+}}</code>. The value between the <code>{{</code> symbols are used to lookup a value in the <em>command packet</em> sent with the request.</p>
+<p>It is expected that the value is string content: text or html. The system will take that data and replace the token, including the <code>}}</code> symbols.</p>
+<p><strong>Example:</strong></p>
+<div class="codehilite"><pre><span></span>&lt;div&gt;Hello, {{user.firstName}}&lt;/div&gt;
 </pre></div>
 
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<p>When enabled, permalinks are inserted automatically.</p>
+<h3 id="vfs-variables-vf-var">VFS Variables (vf-var)<a class="headerlink" href="#vfs-variables-vf-var" title="Permanent link">&para;</a></h3>
+<p>VFS Variables are smarter tokens. All VFS Variables are implemented as html attributes and function in different ways depending on the target node and the specific VFS Variable used.</p>
+<p>Each of these tokens will hold a value that references a path in the <em>command packet</em>. The <em>command packet</em> value will be used in a specific operation depending on the vfs variable but effect the html node to which the vfs variable is applied.</p>
+<ul>
+<li><code>*[vf-insert]</code> - Replaces the innerHtml of the node with data retrieved from a URL.</li>
+<li><code>*[vf-show]</code> - Hides hides the html node if the value in cp is empty or missing.</li>
+<li><code>*[vf-html]</code> - Sets the innerHtml.</li>
+<li><code>*[vf-text]</code> - Sets the innerText.</li>
+<li><code>*[vf-title]</code> - Sets title attribute</li>
+<li><code>*[vf-class]</code> - Append to the class attribute</li>
+<li><code>*[vf-style]</code> - Append to the style attribute</li>
+<li><code>img[vf-src]</code> - Sets an image tag's src attribute</li>
+<li><code>img[vf-alt]</code> - Sets an image tag's alt text attribute</li>
+<li><code>progress[vf-value]</code> - Sets a progress's bar value attribute</li>
+<li><code>a[vf-href]</code> - Sets an anchor tag's href attribute</li>
+<li><code>a[vf-tel]</code> - Sets an anchor tag's href attribute using pattern <em>"tel:%s"</em></li>
+<li><code>a[vf-mailto]</code> - Sets an anchor tag's href attribute using pattern <em>"mailto:%s"</em></li>
+<li><code>a[vf-thumb]</code> - Sets an anchor tag's href attribute using pattern <em>"https://.../%s/document.thumb"</em></li>
+<li><code>a[vf-preview]</code> - Sets an anchor tag's href attribute using pattern <em>"https://.../%s/document.preview.1"</em></li>
+<li><code>a[vf-output]</code> - Sets an anchor tag's href attribute using pattern <em>"https://.../%s/finalOutput"</em></li>
+<li><code>img[vf-thumb]</code> - Sets an image tag's src attribute using pattern <em>"https://.../%s/document.thumb"</em></li>
+<li><code>img[vf-preview]</code> - Sets an image tag's src attribute using pattern <em>"https://.../${stage}/%s/document.preview.1"</em></li>
+</ul>
+<p>Several aliases exist to simplify document creation:</p>
+<ul>
+<li><code>*[vf-var]</code> points to <code>*[vf-html]</code></li>
+<li><code>img[vf-ref]</code> points to <code>img[vf-src]</code></li>
+<li><code>a[vf-ref]</code> points to <code>a[vf-href]</code></li>
+<li><code>a[vf-mail]</code> points to <code>a[vf-mailto]</code></li>
+<li><code>*[vfVar]</code> points to <code>*[vf-text]</code></li>
+<li><code>img[vfVar]</code> points to <code>img[vf-src]</code></li>
+<li><code>a[vfVar]</code> points to <code>a[vf-href]</code></li>
+</ul>
+<p><sup><em>Note: <code>a[vfVar]</code> has special handing for tel and mailto values.  See special
+cases below for more information.</em></sup></p>
+<p><sup><em>Note: The <code>*</code> symbol above indicates that this vfs variable is valid on any tag. although it might not make sense on certain tags.</em></sup></p>
+<h2 id="special-handling">Special Handling<a class="headerlink" href="#special-handling" title="Permanent link">&para;</a></h2>
+<p>Most tags function the same. They extract data from the <em>command packet</em>, manipulate it, then set the resulting value into a attribute, text, or html on the current node. <code>vfVar</code>'s are different.  This is <code>vfVar</code>, NOT <code>vf-var</code>.</p>
+<p><code>*[vfVar]</code> simply places the value found in the <em>command packet</em> at the referenced path into the innerText of the node to which the attribute was applied. This is identical behavor to <code>*[vf-text]</code>. The exception to this rule is if the tag is a <code>&lt;img /&gt;</code> or <code>&lt;a /&gt;</code>.</p>
+<p><code>img[vfVar]</code> will still pull the value from the <em>command packet</em> but, rather then setting the innerText, it will set the <code>src</code> attribute of the image tag. This is identical behavior to <code>img[vf-src]</code>.</p>
+<p><code>a[vfVar]</code> will still pull the value from the <em>command packet</em> but, rather then setting the innerText, it will set the <code>href</code> attribute of the anchor tag.  Additionally, the value set on the href attribute might be altered if the value currently in the href attribute (that is the value that exists before tokenization) starts with <em>tel:</em> or <em>mailto:</em>.   If either of these strings are set, the system will maintain the prefix.</p>
+<p><strong>Example:</strong></p>
+<div class="codehilite"><pre><span></span>&lt;a vfVar=&#39;user.phone&#39; href=&#39;tel:5555555555&#39;&gt;Call me&lt;/a&gt;
+</pre></div>
+
+<p>Assuming the <em>command packet</em> has a value user.phone="1234567890", the resulting string from the above example will read as follows.</p>
+<div class="codehilite"><pre><span></span>&lt;a vfVar=&#39;user.phone&#39; href=&#39;tel:1234567890&#39;&gt;Call me&lt;/a&gt;
+</pre></div>
                 
                   
                 
@@ -790,7 +887,7 @@ permalink, a string can be passed, e.g.:</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../metadata/" title="Metadata" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../commandpacket-spec/" title="Command Packet Specs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -799,19 +896,19 @@ permalink, a string can be passed, e.g.:</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Metadata
+                Command Packet Specs
               </span>
             </div>
           </a>
         
         
-          <a href="../pymdown/" title="PyMdown" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../communication/theme/" title="Theme" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                PyMdown
+                Theme
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

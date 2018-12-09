@@ -1,0 +1,1140 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for the Velma API's">
+      
+      
+        <link rel="canonical" href="https://readme.velma.io/getting-started/commandpacket-spec/">
+      
+      
+        <meta name="author" content="NSN Solutions, Inc.">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../images/TrackerIcon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>Command Packet Specs - Velma.io</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#version" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://readme.velma.io" title="Velma.io" class="md-header-nav__button md-logo">
+          
+            <img src="../../images/TrackerIcon.png" width="40" height="40" style="margin-top: -5px;">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Velma.io
+              </span>
+              <span class="md-header-nav__topic">
+                Command Packet Specs
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." title="Getting Started" class="md-tabs__link md-tabs__link--active">
+          Getting Started
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../communication/theme/" title="Communication" class="md-tabs__link">
+          Communication
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../extensions/admonition/" title="Libraries" class="md-tabs__link">
+          Libraries
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../example/" title="Examples" class="md-tabs__link">
+          Examples
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://readme.velma.io" title="Velma.io" class="md-nav__button md-logo">
+      
+        <img src="../../images/TrackerIcon.png" width="48" height="48">
+      
+    </a>
+    Velma.io
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api-reference/" title="API Reference" class="md-nav__link">
+      API Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hierarchy/" title="Hierarchy" class="md-nav__link">
+      Hierarchy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../authentication/" title="Authentication" class="md-nav__link">
+      Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../generateJWT/" title="Generate a JWT" class="md-nav__link">
+      Generate a JWT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../commandpackets/" title="Command Packets" class="md-nav__link">
+      Command Packets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Command Packet Specs
+      </label>
+    
+    <a href="./" title="Command Packet Specs" class="md-nav__link md-nav__link--active">
+      Command Packet Specs
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version" title="Version" class="md-nav__link">
+    Version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type" title="Type" class="md-nav__link">
+    Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" title="Authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email" title="Email" class="md-nav__link">
+    Email
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user" title="User" class="md-nav__link">
+    User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product" title="Product" class="md-nav__link">
+    Product
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-id" title="Product ID" class="md-nav__link">
+    Product ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom" title="Custom" class="md-nav__link">
+    Custom
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact" title="Contact" class="md-nav__link">
+    Contact
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-command-packet" title="Sample Command Packet" class="md-nav__link">
+    Sample Command Packet
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../commandpacket-tokens/" title="Command Packet Tokens" class="md-nav__link">
+      Command Packet Tokens
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Communication
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Communication
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../communication/theme/" title="Theme" class="md-nav__link">
+      Theme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../specimen/" title="Specimen" class="md-nav__link">
+      Specimen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/admonition/" title="Specimen2" class="md-nav__link">
+      Specimen2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customization/" title="Customization" class="md-nav__link">
+      Customization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../compliance/" title="Compliance with GDPR" class="md-nav__link">
+      Compliance with GDPR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/" title="Release notes" class="md-nav__link">
+      Release notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../authors-notes/" title="Author's notes" class="md-nav__link">
+      Author's notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Libraries
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Libraries
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/admonition/" title="Admonition" class="md-nav__link">
+      Admonition
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/codehilite/" title="CodeHilite" class="md-nav__link">
+      CodeHilite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/footnotes/" title="Footnotes" class="md-nav__link">
+      Footnotes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/metadata/" title="Metadata" class="md-nav__link">
+      Metadata
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/permalinks/" title="Permalinks" class="md-nav__link">
+      Permalinks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extensions/pymdown/" title="PyMdown" class="md-nav__link">
+      PyMdown
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Examples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Examples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/" title="Sending an Email" class="md-nav__link">
+      Sending an Email
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version" title="Version" class="md-nav__link">
+    Version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type" title="Type" class="md-nav__link">
+    Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" title="Authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email" title="Email" class="md-nav__link">
+    Email
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user" title="User" class="md-nav__link">
+    User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product" title="Product" class="md-nav__link">
+    Product
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-id" title="Product ID" class="md-nav__link">
+    Product ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom" title="Custom" class="md-nav__link">
+    Custom
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact" title="Contact" class="md-nav__link">
+    Contact
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-command-packet" title="Sample Command Packet" class="md-nav__link">
+    Sample Command Packet
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Command Packet Specs</h1>
+                
+                <h4 id="version">Version<a class="headerlink" href="#version" title="Permanent link">&para;</a></h4>
+<p><em><em>(required)</em></em> - indicates what command packet version is used
+  * value: 1.6</p>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;version&quot;</span><span class="err">:</span> <span class="s2">&quot;1.6&quot;</span>
+</pre></div>
+
+<h4 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
+<p><em><em>(required)</em></em> - indicates the type of communication the command packet is being submitted for</p>
+<ul>
+<li>value: print | email | pdf | sms</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;type&quot;</span><span class="err">:</span> <span class="s2">&quot;email&quot;</span>
+</pre></div>
+
+<h4 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h4>
+<p><em><em>(required)</em></em> - authenticates the sender of the command packet</p>
+<ul>
+<li><strong>sponsorkey</strong>:  <em><em>(required)</em></em> - provided following on-boarding</li>
+<li><strong>clientkey</strong>:  <em><em>(required)</em></em> - provided following on-boarding</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;authentication&quot;</span><span class="err">:</span> <span class="p">{</span>
+  <span class="nt">&quot;sponsorkey&quot;</span><span class="p">:</span> <span class="s2">&quot;0a3c5aad8cfb496eae7966339a024965&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;clientkey&quot;</span><span class="p">:</span> <span class="s2">&quot;DEMO6661549e4aa9811754bb29880cc9&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+<h4 id="email">Email<a class="headerlink" href="#email" title="Permanent link">&para;</a></h4>
+<ul>
+<li><em><em>(required for email sending)</em></em> - email sender information<ul>
+<li><strong>subject</strong>:  <em>(required)</em> - subject line of the email</li>
+<li><strong>from</strong>: <em>(required)</em></li>
+<li><strong>name</strong>:  <em>(required)</em> - sender's name</li>
+<li><strong>email</strong>:  <em>(required)</em> - sender's email</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;email&quot;</span><span class="err">:</span> <span class="p">{</span>
+  <span class="nt">&quot;subject&quot;</span><span class="p">:</span> <span class="s2">&quot;Demo Email&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;from&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John Public&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;john.public@velma.com&quot;</span>
+       <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h4 id="user">User<a class="headerlink" href="#user" title="Permanent link">&para;</a></h4>
+<p><em><em>(required)</em></em> - this is a variable field area with replacement token values
+    (The goal of this area is for it to be any tokens that are to be used inside the product html and operating against the <a href="https://readme.velma.io/#1ca90d39-9082-48f9-a84a-5947e139b7eb">command packet token system</a>)</p>
+<ul>
+<li><strong>appuniqueid</strong> - <em><em>(required)</em></em> - a reference sponsor id that uniquely identifies the user.<br>
+   The other fields can be anything you want to replace in your product.</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;user&quot;</span><span class="err">:</span> <span class="p">{</span>
+     <span class="nt">&quot;appuniqueid&quot;</span><span class="p">:</span> <span class="s2">&quot;2456&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Loan Officer&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;nmls&quot;</span><span class="p">:</span> <span class="s2">&quot;1234321&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;office telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;555-5555&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;cell telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;555-5551&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;company&quot;</span><span class="p">:</span> <span class="s2">&quot;CO Public &quot;</span><span class="p">,</span>
+     <span class="nt">&quot;address1&quot;</span><span class="p">:</span> <span class="s2">&quot;5465 COPublic Way&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Boise&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;Idaho&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;83646&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;personalphoto&quot;</span><span class="p">:</span> <span class="s2">&quot;https://urllocation/personalphoto.jpg&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;businesslogo&quot;</span><span class="p">:</span> <span class="s2">&quot;http://urllocation/publicCo.jpg&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;disclaimer&quot;</span><span class="p">:</span> <span class="s2">&quot;My Disclaimer&quot;</span>
+ <span class="p">}</span>
+</pre></div>
+
+<h4 id="product">Product<a class="headerlink" href="#product" title="Permanent link">&para;</a></h4>
+<p><em><em>(required)</em></em> - This is the id of the library piece that will be fetched, tokenized and sent to the contact.<br></p>
+<ul>
+<li><strong>id</strong>:  <em><em>(required)</em></em> - ID of the VFS product ("ID" or "Custom")<br></li>
+<li><strong>template</strong>:  - custom <strong>PUBLIC</strong> template url</li>
+</ul>
+<h5 id="product-id">Product ID<a class="headerlink" href="#product-id" title="Permanent link">&para;</a></h5>
+<p>The Product ID method when invoking a product from the library</p>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;product&quot;</span><span class="err">:</span> <span class="p">{</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;16568&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+<h5 id="custom">Custom<a class="headerlink" href="#custom" title="Permanent link">&para;</a></h5>
+<p>The Custom method when invoking a product that is <em><em>not</em></em> from the library</p>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;product&quot;</span><span class="err">:</span> <span class="p">{</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;custom&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;template: &quot;</span><span class="err">http</span><span class="p">:</span><span class="err">//url_public_template.html&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The url must be publicly accessible.</p>
+</div>
+<h4 id="contact">Contact<a class="headerlink" href="#contact" title="Permanent link">&para;</a></h4>
+<p><em><em>(required)</em></em> - This is an array of recipients (contacts).   All the fields in the contact array are provided by you, the sponsor.  They are used in token replacement and for reference in the VFS system.</p>
+<ul>
+<li><strong>appuniqueid</strong>:  <em>(required)</em> - a reference id of the sponsor contact.  <em>provided by you</em></li>
+<li><strong>name</strong>:  <em>(required)</em> - a reference 'name' of the sponsor contact.  <em>provided by you</em></li>
+<li><strong>email</strong>:  <em>(required)</em> - the recipients email address. <em>provided by you</em></li>
+<li><strong>callbackurl</strong>:  This is where the email <a href="https://readme.velma.io/#e8165fa0-c5ef-4d8a-ad70-254e61a22649">events</a> gets posted back to.  The sponsor, if they want to receive these events, will construct the url so they know which contact is working with the email.</li>
+</ul>
+<div class="codehilite"><pre><span></span>    <span class="s2">&quot;contact&quot;</span><span class="err">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;appuniqueid&quot;</span><span class="p">:</span> <span class="s2">&quot;abcd1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mary Contact&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;callbackurl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cbapi/c?id=abc123&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Mary&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;Contact&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;mary.contact@gmail.com&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;appuniqueid&quot;</span><span class="p">:</span> <span class="s2">&quot;abcd2&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Debbie Contact&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;callbackurl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cbapi/c?id=abcd2&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Debbie&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;Contact&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;deb.contact@gmail.com&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;appuniqueid&quot;</span><span class="p">:</span> <span class="s2">&quot;abcd3&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Robert Contact&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;callbackUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cbapi/contact?id=abcd3&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Robert&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;Contact&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;rob.contact@gmail.com&quot;</span>
+            <span class="p">}</span>
+    <span class="p">]</span>
+</pre></div>
+
+<h4 id="sample-command-packet">Sample Command Packet<a class="headerlink" href="#sample-command-packet" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+   <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.6&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;email&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;authentication&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;sponsorkey&quot;</span><span class="p">:</span> <span class="s2">&quot;0a3c5aad8cfb496eae7966339a024965&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;clientkey&quot;</span><span class="p">:</span> <span class="s2">&quot;DEMO6661549e4aa9811754bb29880cc9&quot;</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;subject&quot;</span><span class="p">:</span> <span class="s2">&quot;Demo Email&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;from&quot;</span> <span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John Public&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;john.public@1stdemomortgage.com&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;appuniqueid&quot;</span><span class="p">:</span> <span class="s2">&quot;1234&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;John Public&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Loan Officer&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;john.public@velma.com&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;company&quot;</span><span class="p">:</span> <span class="s2">&quot;1ST DEMO&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;citystatezip&quot;</span><span class="p">:</span> <span class="s2">&quot;x El Segundo, CA 90245 x&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cellphone&quot;</span><span class="p">:</span><span class="s2">&quot;(208) 555-6969&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;officephone&quot;</span><span class="p">:</span> <span class="s2">&quot;(208) 555-9696&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;photo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://as.velma.com/user/6560/settings/PersonalPhoto.jpg&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;logo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://as.velma.com/user/6560/settings/BusinessLogo.jpg&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;website&quot;</span><span class="p">:</span> <span class="s2">&quot;https://readme.velma.io/&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;disclaimer&quot;</span><span class="p">:</span> <span class="s2">&quot;1ST DEMO Disclaimer&quot;</span>
+   <span class="p">},</span>  
+   <span class="nt">&quot;product&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;197&quot;</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;contact&quot;</span><span class="p">:</span> <span class="p">[</span>
+       <span class="p">{</span>
+        <span class="nt">&quot;appuniqueid&quot;</span><span class="p">:</span> <span class="s2">&quot;9876&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;callbackUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://api.vfs.velma.com/test/capture/json&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mary Public&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Mary&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;contactemail@gmail.com&quot;</span>
+       <span class="p">}</span>
+   <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../commandpackets/" title="Command Packets" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Command Packets
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../commandpacket-tokens/" title="Command Packet Tokens" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Command Packet Tokens
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 NSN Solutions, Inc.
+          </div>
+        
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="None" class="md-footer-social__link fa fa-None"></a>
+    
+      <a href="None" class="md-footer-social__link fa fa-None"></a>
+    
+      <a href="None" class="md-footer-social__link fa fa-None"></a>
+    
+      <a href="None" class="md-footer-social__link fa fa-None"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.905597d0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
