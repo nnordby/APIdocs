@@ -53,7 +53,7 @@
       
         
         
-        <meta name="theme-color" content="#3f51b5">
+        <meta name="theme-color" content="#2196f3">
       
     
     
@@ -74,7 +74,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="amber">
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="green">
   
     <svg class="md-svg">
       <defs>
@@ -439,6 +439,54 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../commandpacket-responses/" title="Command Packet Responses" class="md-nav__link">
+      Command Packet Responses
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../commandpacket-responseCodes/" title="Response Codes" class="md-nav__link">
+      Response Codes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../callbackevents/" title="Callback Events" class="md-nav__link">
+      Callback Events
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api-statuscall/" title="API Status Call" class="md-nav__link">
+      API Status Call
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -799,62 +847,66 @@
                 
                   <h1>Command Packet Tokens</h1>
                 
-                <h3 id="supported-tags">Supported Tags<a class="headerlink" href="#supported-tags" title="Permanent link">&para;</a></h3>
+                <p>Command Packet Tokens are used in the content (HTML or text) of a Product that drives the content, message, and even the design.  Tokens are a powerful way of creating hyper-personalized messaging to a recipient (contact) <a href="/getting-started/commandpackets/#sample">using the data provided</a> in the command packet.</p>
+<h3 id="supported-tags">Supported Tags<a class="headerlink" href="#supported-tags" title="Permanent link">&para;</a></h3>
 <p>This document describes the new vf-vars and token operations now supported by the token service.  Note the vfvar (no hyphen) tokens are separate and not impacted by the vf-vars.</p>
 <h3 id="legacy-tokens">Legacy Tokens<a class="headerlink" href="#legacy-tokens" title="Permanent link">&para;</a></h3>
-<p>There are 2 legacy tokens supported by the tokenService:
-- <strong>Insert Token</strong>: <code>@@TOKEN@@</code>
-- <strong>Replace Token</strong>: <code>{{TOKEN}}</code></p>
+<p>There are 2 legacy tokens supported by the tokenService:</p>
+<ul>
+<li><strong>Insert Token</strong>: <code>@@TOKEN@@</code></li>
+<li><strong>Replace Token</strong>: <code>{{TOKEN}}</code></li>
+</ul>
 <h3 id="insert-token">Insert Token<a class="headerlink" href="#insert-token" title="Permanent link">&para;</a></h3>
 <p>The insert token is used to pull data from a URL and place it into the active document.  The operations starts by finding the token. The search pattern is <code>@@[a-zA-Z0-9._-]+@@</code>. The value between the <code>@@</code> symbols are used to lookup a value in the <em>command packet</em> sent with the request.  </p>
 <p>It is expected that the value in the <em>command packet</em> will be a URL. The system will fetch the content of that url and then replace the token, including the <code>@@</code> symbols.</p>
 <p><strong>Example:</strong></p>
-<div class="codehilite"><pre><span></span>&lt;div&gt;@@document.contactArea@@&lt;/div&gt;
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>@@document.contactArea@@<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 
 <h3 id="replace-token">Replace Token<a class="headerlink" href="#replace-token" title="Permanent link">&para;</a></h3>
 <p>The replace token is used to put data from a command packet into the active document. The operation starts by finding the token. The search pattern is <code>{{[a-zA-Z0-9._-]+}}</code>. The value between the <code>{{</code> symbols are used to lookup a value in the <em>command packet</em> sent with the request.</p>
 <p>It is expected that the value is string content: text or html. The system will take that data and replace the token, including the <code>}}</code> symbols.</p>
 <p><strong>Example:</strong></p>
-<div class="codehilite"><pre><span></span>&lt;div&gt;Hello, {{user.firstName}}&lt;/div&gt;
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Hello, {{user.firstName}}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 
 <h3 id="vfs-variables-vf-var">VFS Variables (vf-var)<a class="headerlink" href="#vfs-variables-vf-var" title="Permanent link">&para;</a></h3>
 <p>VFS Variables are smarter tokens. All VFS Variables are implemented as html attributes and function in different ways depending on the target node and the specific VFS Variable used.</p>
 <p>Each of these tokens will hold a value that references a path in the <em>command packet</em>. The <em>command packet</em> value will be used in a specific operation depending on the vfs variable but effect the html node to which the vfs variable is applied.</p>
 <ul>
-<li><code>*[vf-insert]</code> - Replaces the innerHtml of the node with data retrieved from a URL.</li>
-<li><code>*[vf-show]</code> - Hides hides the html node if the value in cp is empty or missing.</li>
-<li><code>*[vf-html]</code> - Sets the innerHtml.</li>
-<li><code>*[vf-text]</code> - Sets the innerText.</li>
-<li><code>*[vf-title]</code> - Sets title attribute</li>
-<li><code>*[vf-class]</code> - Append to the class attribute</li>
-<li><code>*[vf-style]</code> - Append to the style attribute</li>
+<li><code>[vf-insert]</code> - Replaces the innerHtml of the node with data retrieved from a URL.</li>
+<li><code>[vf-show]</code> - Hides hides the html node if the value in cp is empty or missing.</li>
+<li><code>[vf-html]</code> - Sets the innerHtml.</li>
+<li><code>[vf-text]</code> - Sets the innerText.</li>
+<li><code>[vf-title]</code> - Sets title attribute</li>
+<li><code>[vf-class]</code> - Append to the class attribute</li>
+<li><code>[vf-style]</code> - Append to the style attribute</li>
 <li><code>img[vf-src]</code> - Sets an image tag's src attribute</li>
 <li><code>img[vf-alt]</code> - Sets an image tag's alt text attribute</li>
 <li><code>progress[vf-value]</code> - Sets a progress's bar value attribute</li>
 <li><code>a[vf-href]</code> - Sets an anchor tag's href attribute</li>
-<li><code>a[vf-tel]</code> - Sets an anchor tag's href attribute using pattern <em>"tel:%s"</em></li>
-<li><code>a[vf-mailto]</code> - Sets an anchor tag's href attribute using pattern <em>"mailto:%s"</em></li>
-<li><code>a[vf-thumb]</code> - Sets an anchor tag's href attribute using pattern <em>"https://.../%s/document.thumb"</em></li>
-<li><code>a[vf-preview]</code> - Sets an anchor tag's href attribute using pattern <em>"https://.../%s/document.preview.1"</em></li>
-<li><code>a[vf-output]</code> - Sets an anchor tag's href attribute using pattern <em>"https://.../%s/finalOutput"</em></li>
-<li><code>img[vf-thumb]</code> - Sets an image tag's src attribute using pattern <em>"https://.../%s/document.thumb"</em></li>
-<li><code>img[vf-preview]</code> - Sets an image tag's src attribute using pattern <em>"https://.../${stage}/%s/document.preview.1"</em></li>
+<li><code>a[vf-tel]</code> - Sets an anchor tag's href attribute using pattern <code>"tel:%s"</code></li>
+<li><code>a[vf-mailto]</code> - Sets an anchor tag's href attribute using pattern <code>"mailto:%s"</code></li>
+<li><code>a[vf-thumb]</code> - Sets an anchor tag's href attribute using pattern <code>"https://.../%s/document.thumb"</code></li>
+<li><code>a[vf-preview]</code> - Sets an anchor tag's href attribute using pattern <code>"https://.../%s/document.preview.1"</code></li>
+<li><code>a[vf-output]</code> - Sets an anchor tag's href attribute using pattern <code>"https://.../%s/finalOutput"</code></li>
+<li><code>img[vf-thumb]</code> - Sets an image tag's src attribute using pattern <code>"https://.../%s/document.thumb"</code></li>
+<li><code>img[vf-preview]</code> - Sets an image tag's src attribute using pattern <code>"https://.../${stage}/%s/document.preview.1"</code></li>
 </ul>
 <p>Several aliases exist to simplify document creation:</p>
 <ul>
-<li><code>*[vf-var]</code> points to <code>*[vf-html]</code></li>
+<li><code>[vf-var]</code> points to <code>[vf-html]</code></li>
 <li><code>img[vf-ref]</code> points to <code>img[vf-src]</code></li>
 <li><code>a[vf-ref]</code> points to <code>a[vf-href]</code></li>
 <li><code>a[vf-mail]</code> points to <code>a[vf-mailto]</code></li>
-<li><code>*[vfVar]</code> points to <code>*[vf-text]</code></li>
+<li><code>[vfVar]</code> points to <code>*[vf-text]</code></li>
 <li><code>img[vfVar]</code> points to <code>img[vf-src]</code></li>
 <li><code>a[vfVar]</code> points to <code>a[vf-href]</code></li>
 </ul>
 <p><sup><em>Note: <code>a[vfVar]</code> has special handing for tel and mailto values.  See special
 cases below for more information.</em></sup></p>
-<p><sup><em>Note: The <code>*</code> symbol above indicates that this vfs variable is valid on any tag. although it might not make sense on certain tags.</em></sup></p>
+<!--<sup>_Note: The ```*``` symbol above indicates that this vfs variable is valid on any tag. although it might not make sense on certain tags._</sup>-->
+
 <h2 id="special-handling">Special Handling<a class="headerlink" href="#special-handling" title="Permanent link">&para;</a></h2>
 <p>Most tags function the same. They extract data from the <em>command packet</em>, manipulate it, then set the resulting value into a attribute, text, or html on the current node. <code>vfVar</code>'s are different.  This is <code>vfVar</code>, NOT <code>vf-var</code>.</p>
 <p><code>*[vfVar]</code> simply places the value found in the <em>command packet</em> at the referenced path into the innerText of the node to which the attribute was applied. This is identical behavor to <code>*[vf-text]</code>. The exception to this rule is if the tag is a <code>&lt;img /&gt;</code> or <code>&lt;a /&gt;</code>.</p>
@@ -902,13 +954,13 @@ cases below for more information.</em></sup></p>
           </a>
         
         
-          <a href="../../communication/theme/" title="Theme" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../commandpacket-responses/" title="Command Packet Responses" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Theme
+                Command Packet Responses
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -46,6 +46,26 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://readme.velma.io/getting-started/commandpacket-responses/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/getting-started/commandpacket-responseCodes/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/getting-started/callbackevents/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://readme.velma.io/getting-started/api-statuscall/</loc>
+     <lastmod>2018-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://readme.velma.io/communication/theme/</loc>
      <lastmod>2018-12-08</lastmod>
      <changefreq>daily</changefreq>
