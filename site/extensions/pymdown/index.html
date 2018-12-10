@@ -197,7 +197,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../admonition/" title="Libraries" class="md-tabs__link md-tabs__link--active">
+        <a href="../../libraries/getproducts/" title="Libraries" class="md-tabs__link md-tabs__link--active">
           Libraries
         </a>
       
@@ -512,66 +512,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../compliance/" title="Compliance with GDPR" class="md-nav__link">
-      Compliance with GDPR
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../release-notes/" title="Release notes" class="md-nav__link">
-      Release notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../authors-notes/" title="Author's notes" class="md-nav__link">
-      Author's notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../contributing/" title="Contributing" class="md-nav__link">
-      Contributing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../license/" title="License" class="md-nav__link">
-      License
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -597,6 +537,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getproducts/" title="Get Product List" class="md-nav__link">
+      Get Product List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getsingleproduct/" title="Get Single Product" class="md-nav__link">
+      Get Single Product
+    </a>
+  </li>
+
         
           
           
@@ -1048,12 +1012,29 @@ great features to the standard Markdown library. For this reason, the
 with the Material theme.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>The PyMdown Extensions package can be installed with the following command:</p>
-<div class="codehilite"><pre><span></span>pip install pymdown-extensions
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install pymdown-extensions
 </pre></div>
+</td></tr></table>
 
 <p>The following list of extensions that are part of the PyMdown Extensions
 package are recommended to be used together with the Material theme:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.arithmatex</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.betterem</span><span class="p p-Indicator">:</span>
       <span class="l l-Scalar l-Scalar-Plain">smart_enable</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">all</span>
@@ -1071,6 +1052,7 @@ package are recommended to be used together with the Material theme:</p>
       <span class="l l-Scalar l-Scalar-Plain">custom_checkbox</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.tilde</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <h3 id="arithmatex-mathjax">Arithmatex <small>MathJax</small><a class="headerlink" href="#arithmatex-mathjax" title="Permanent link">&para;</a></h3>
@@ -1083,14 +1065,35 @@ reference on how to write equations in TeX syntax.</p>
 <p>Besides activating the extension in the <code>mkdocs.yml</code>, the MathJax JavaScript
 runtime needs to be included. This must be done with
 <a href="../../customization/#additional-javascript">additional JavaScript</a>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_javascript</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_javascript</span><span class="p p-Indicator">:</span>
   <span class="p p-Indicator">-</span> <span class="s">&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <p>If you want to override the default MathJax configuration, you can do this by
 adding another JavaScript file <strong>before</strong> the MathJax runtime in
 <code>extra_javascript</code> which contains your MathJax configuration, e.g.:</p>
-<div class="codehilite"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">MathJax</span> <span class="o">=</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">MathJax</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">tex2jax</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s2">&quot;\\(&quot;</span><span class="p">,</span><span class="s2">&quot;\\)&quot;</span><span class="p">]</span> <span class="p">],</span>
     <span class="nx">displayMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s2">&quot;\\[&quot;</span><span class="p">,</span><span class="s2">&quot;\\]&quot;</span><span class="p">]</span> <span class="p">]</span>
@@ -1111,20 +1114,27 @@ adding another JavaScript file <strong>before</strong> the MathJax runtime in
   <span class="nx">messageStyle</span><span class="o">:</span> <span class="s2">&quot;none&quot;</span>
 <span class="p">};</span>
 </pre></div>
+</td></tr></table>
 
 <p>In your <code>mkdocs.yml</code>, include it with:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_javascript</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_javascript</span><span class="p p-Indicator">:</span>
   <span class="p p-Indicator">-</span> <span class="s">&#39;javascripts/extra.js&#39;</span>
   <span class="p p-Indicator">-</span> <span class="s">&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <h4 id="blocks">Blocks<a class="headerlink" href="#blocks" title="Permanent link">&para;</a></h4>
 <p>Blocks are enclosed in <code class="codehilite"><span class="sb">$$</span><span class="nb">...</span><span class="s">$$</span></code> which are placed on separate lines.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span><span class="sb">$$</span><span class="nb"></span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="sb">$$</span><span class="nb"></span>
 <span class="nv">\frac</span><span class="nb">{n</span><span class="o">!</span><span class="nb">}{k</span><span class="o">!(</span><span class="nb">n</span><span class="o">-</span><span class="nb">k</span><span class="o">)!</span><span class="nb">} </span><span class="o">=</span><span class="nb"> </span><span class="nv">\binom</span><span class="nb">{n}{k}</span>
 <span class="s">$$</span>
 </pre></div>
+</td></tr></table>
 
 <p>Result:</p>
 <div>
@@ -1138,8 +1148,9 @@ adding another JavaScript file <strong>before</strong> the MathJax runtime in
 <h4 id="inline">Inline<a class="headerlink" href="#inline" title="Permanent link">&para;</a></h4>
 <p>Inline equations need to be enclosed in <code class="codehilite"><span class="s">$</span><span class="nb">...</span><span class="s">$</span></code>:</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>Lorem ipsum dolor sit amet: <span class="s">$</span><span class="nb">p</span><span class="o">(</span><span class="nb">x|y</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{p</span><span class="o">(</span><span class="nb">y|x</span><span class="o">)</span><span class="nb">p</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb">}{p</span><span class="o">(</span><span class="nb">y</span><span class="o">)</span><span class="nb">}</span><span class="s">$</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Lorem ipsum dolor sit amet: <span class="s">$</span><span class="nb">p</span><span class="o">(</span><span class="nb">x|y</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{p</span><span class="o">(</span><span class="nb">y|x</span><span class="o">)</span><span class="nb">p</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb">}{p</span><span class="o">(</span><span class="nb">y</span><span class="o">)</span><span class="nb">}</span><span class="s">$</span>
 </pre></div>
+</td></tr></table>
 
 <p>Result:</p>
 <p>Lorem ipsum dolor sit amet: <span><span class="MathJax_Preview">p(x|y) = \frac{p(y|x)p(x)}{p(y)}</span><script type="math/tex">p(x|y) = \frac{p(y|x)p(x)}{p(y)}</script></span></p>
@@ -1206,7 +1217,16 @@ keeping track of tasks and showing what has been done and has yet to be done.
 Checkbox lists are like regular lists, but prefixed with <code>[ ]</code> for empty or
 <code>[x]</code> for filled checkboxes.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>* [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>* [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
 * [x] Nulla lobortis egestas semper
 * [x] Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est
 * [ ] Vestibulum convallis sit amet nisi a tincidunt
@@ -1217,6 +1237,7 @@ Checkbox lists are like regular lists, but prefixed with <code>[ ]</code> for em
 * [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
 * [ ] Nulla vel eros venenatis, imperdiet enim id, faucibus nisi
 </pre></div>
+</td></tr></table>
 
 <p>Result:</p>
 <ul class="task-list">
