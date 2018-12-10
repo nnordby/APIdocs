@@ -197,7 +197,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../admonition/" title="Libraries" class="md-tabs__link md-tabs__link--active">
+        <a href="../../libraries/getproducts/" title="Libraries" class="md-tabs__link md-tabs__link--active">
           Libraries
         </a>
       
@@ -512,66 +512,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../compliance/" title="Compliance with GDPR" class="md-nav__link">
-      Compliance with GDPR
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../release-notes/" title="Release notes" class="md-nav__link">
-      Release notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../authors-notes/" title="Author's notes" class="md-nav__link">
-      Author's notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../contributing/" title="Contributing" class="md-nav__link">
-      Contributing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../license/" title="License" class="md-nav__link">
-      License
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -597,6 +537,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getproducts/" title="Get Product List" class="md-nav__link">
+      Get Product List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getsingleproduct/" title="Get Single Product" class="md-nav__link">
+      Get Single Product
+    </a>
+  </li>
+
         
           
           
@@ -814,19 +778,25 @@ each headline, which makes it possible to directly link to a subpart of the
 document.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>To enable permalinks, add the following to your <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">toc</span><span class="p p-Indicator">:</span>
       <span class="l l-Scalar l-Scalar-Plain">permalink</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
+</td></tr></table>
 
 <p>This will add a link containing the paragraph symbol <code>¶</code> at the end of each
 headline (exactly like on the page you're currently viewing), which the
 Material theme will make appear on hover. In order to change the text of the
 permalink, a string can be passed, e.g.:</p>
-<div class="codehilite"><pre><span></span>markdown_extensions:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>markdown_extensions:
   - toc:
       permalink: Link
 </pre></div>
+</td></tr></table>
 
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>When enabled, permalinks are inserted automatically.</p>

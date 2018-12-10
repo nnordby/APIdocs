@@ -197,7 +197,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../extensions/admonition/" title="Libraries" class="md-tabs__link">
+        <a href="../libraries/getproducts/" title="Libraries" class="md-tabs__link">
           Libraries
         </a>
       
@@ -647,66 +647,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../compliance/" title="Compliance with GDPR" class="md-nav__link">
-      Compliance with GDPR
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../release-notes/" title="Release notes" class="md-nav__link">
-      Release notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../authors-notes/" title="Author's notes" class="md-nav__link">
-      Author's notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../contributing/" title="Contributing" class="md-nav__link">
-      Contributing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../license/" title="License" class="md-nav__link">
-      License
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -730,6 +670,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../libraries/getproducts/" title="Get Product List" class="md-nav__link">
+      Get Product List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../libraries/getsingleproduct/" title="Get Single Product" class="md-nav__link">
+      Get Single Product
+    </a>
+  </li>
+
         
           
           
@@ -997,14 +961,18 @@ JavaScript files to the <code>docs</code> directory.</p>
 <p>If you want to tweak some colors or change the spacing of certain elements,
 you can do this in a separate stylesheet. The easiest way is by creating a
 new stylesheet file in your <code>docs</code> directory:</p>
-<div class="codehilite"><pre><span></span>mkdir docs/stylesheets
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdir docs/stylesheets
 touch docs/stylesheets/extra.css
 </pre></div>
+</td></tr></table>
 
 <p>Then, add the following line to your <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_css</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_css</span><span class="p p-Indicator">:</span>
   <span class="p p-Indicator">-</span> <span class="s">&#39;stylesheets/extra.css&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <p>Spin up the development server with <code>mkdocs serve</code> and start typing your
 changes in your additional stylesheet file – you can see them instantly after
@@ -1013,14 +981,18 @@ saving, as the MkDocs development server implements live reloading.</p>
 <p>The same is true for additional JavaScript. If you want to integrate another
 syntax highlighter or add some custom logic to your theme, create a new
 JavaScript file in your <code>docs</code> directory:</p>
-<div class="codehilite"><pre><span></span>mkdir docs/javascripts
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdir docs/javascripts
 touch docs/javascripts/extra.js
 </pre></div>
+</td></tr></table>
 
 <p>Then, add the following line to your <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_javascript</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_javascript</span><span class="p p-Indicator">:</span>
   <span class="p p-Indicator">-</span> <span class="s">&#39;javascripts/extra.js&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <p>Further assistance can be found in the <a href="https://www.mkdocs.org/user-guide/styling-your-docs/#customizing-a-theme">MkDocs documentation</a>.</p>
 <h2 id="extending-the-theme">Extending the theme<a class="headerlink" href="#extending-the-theme" title="Permanent link">&para;</a></h2>
@@ -1031,10 +1003,13 @@ main theme.</p>
 <h3 id="setup-and-theme-structure">Setup and theme structure<a class="headerlink" href="#setup-and-theme-structure" title="Permanent link">&para;</a></h3>
 <p>Reference the Material theme as usual in your <code>mkdocs.yml</code>, and create a
 new folder for overrides, e.g. <code>theme</code>, which you reference using <code>custom_dir</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&#39;material&#39;</span>
   <span class="l l-Scalar l-Scalar-Plain">custom_dir</span><span class="p p-Indicator">:</span> <span class="s">&#39;theme&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <div class="admonition warning">
 <p class="admonition-title">Theme extension prerequisites</p>
@@ -1047,7 +1022,30 @@ original theme, as any file in the theme directory will replace the file with
 the same name which is part of the original theme. Besides, further assets
 may also be put in the theme directory.</p>
 <p>The directory layout of the Material theme is as follows:</p>
-<div class="codehilite"><pre><span></span>.
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>.
 ├─ assets/
 │  ├─ images/                          <span class="c1"># Images and icons</span>
 │  ├─ javascripts/                     <span class="c1"># JavaScript</span>
@@ -1072,6 +1070,7 @@ may also be put in the theme directory.</p>
 ├─ base.html                           <span class="c1"># Base template</span>
 └─ main.html                           <span class="c1"># Default page</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="overriding-partials">Overriding partials<a class="headerlink" href="#overriding-partials" title="Permanent link">&para;</a></h3>
 <p>In order to override the footer, we can replace the <code>footer.html</code> partial with
@@ -1083,12 +1082,17 @@ This can be done with any file.</p>
 which are defined inside the Material theme and wrap specific features. To
 override a template block, create a <code>main.html</code> inside the theme directory and
 define the block, e.g.:</p>
-<div class="codehilite"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
 
 <span class="cp">{%</span> <span class="k">block</span> <span class="nv">htmltitle</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">  &lt;title&gt;Lorem ipsum dolor sit amet&lt;/title&gt;</span>
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
+</td></tr></table>
 
 <p>The Material theme provides the following template blocks:</p>
 <table>
@@ -1186,19 +1190,24 @@ the Material theme and recompile it. This is fairly easy.</p>
 <h3 id="environment-setup">Environment setup<a class="headerlink" href="#environment-setup" title="Permanent link">&para;</a></h3>
 <p>In order to start development on the Material theme, a <a href="https://nodejs.org">Node.js</a> version of
 at least 8 is required. First, clone the repository:</p>
-<div class="codehilite"><pre><span></span>git clone https://github.com/squidfunk/mkdocs-material
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git clone https://github.com/squidfunk/mkdocs-material
 </pre></div>
+</td></tr></table>
 
 <p>Next, all dependencies need to be installed, which is done with:</p>
-<div class="codehilite"><pre><span></span><span class="nb">cd</span> mkdocs-material
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> mkdocs-material
 pip install -r requirements.txt
 npm install
 </pre></div>
+</td></tr></table>
 
 <h3 id="development-mode">Development mode<a class="headerlink" href="#development-mode" title="Permanent link">&para;</a></h3>
 <p>The development server can be started with:</p>
-<div class="codehilite"><pre><span></span>npm run watch
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>npm run watch
 </pre></div>
+</td></tr></table>
 
 <p>This will also start the MkDocs development server which will monitor changes
 on assets, templates and documentation. Point your browser to
@@ -1206,9 +1215,11 @@ on assets, templates and documentation. Point your browser to
 <p>For example, changing the color palette is as simple as changing the
 <code>$md-color-primary</code> and <code>$md-color-accent</code> variables in
 <code>src/assets/stylesheets/_config.scss</code>:</p>
-<div class="codehilite"><pre><span></span><span class="o">$</span><span class="nt">md-color-primary</span><span class="o">:</span> <span class="o">$</span><span class="nt">clr-red-400</span><span class="o">;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">$</span><span class="nt">md-color-primary</span><span class="o">:</span> <span class="o">$</span><span class="nt">clr-red-400</span><span class="o">;</span>
 <span class="o">$</span><span class="nt">md-color-accent</span><span class="o">:</span>  <span class="o">$</span><span class="nt">clr-teal-a700</span><span class="o">;</span>
 </pre></div>
+</td></tr></table>
 
 <div class="admonition warning">
 <p class="admonition-title">Automatically generated files</p>
@@ -1218,8 +1229,9 @@ overriden when the theme is built.</p>
 </div>
 <h3 id="build-process">Build process<a class="headerlink" href="#build-process" title="Permanent link">&para;</a></h3>
 <p>When you've finished making your changes, you can build the theme by invoking:</p>
-<div class="codehilite"><pre><span></span>npm run build
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>npm run build
 </pre></div>
+</td></tr></table>
 
 <p>This triggers the production-level compilation and minification of all
 stylesheets and JavaScript sources. When the command exits, the final theme is
@@ -1262,13 +1274,13 @@ changes to the original Material theme.</p>
           </a>
         
         
-          <a href="../compliance/" title="Compliance with GDPR" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../libraries/getproducts/" title="Get Product List" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Compliance with GDPR
+                Get Product List
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

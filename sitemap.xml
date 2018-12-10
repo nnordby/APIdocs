@@ -2,157 +2,142 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://readme.velma.io/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/api-reference/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/glossary/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/hierarchy/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/authentication/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/generateJWT/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/commandpackets/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/commandpacket-spec/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/commandpacket-tokens/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/commandpacket-responses/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/commandpacket-responseCodes/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/callbackevents/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/api-statuscall/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/communication/sendemail/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/communication/theme/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/getting-started/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/specimen/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/extensions/admonition/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/customization/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://readme.velma.io/compliance/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <loc>https://readme.velma.io/libraries/getproducts/</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://readme.velma.io/release-notes/</loc>
-     <lastmod>2018-12-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://readme.velma.io/authors-notes/</loc>
-     <lastmod>2018-12-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://readme.velma.io/contributing/</loc>
-     <lastmod>2018-12-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://readme.velma.io/license/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <loc>https://readme.velma.io/libraries/getsingleproduct/</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/extensions/admonition/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/extensions/codehilite/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/extensions/footnotes/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/extensions/metadata/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/extensions/permalinks/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/extensions/pymdown/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://readme.velma.io/example/</loc>
-     <lastmod>2018-12-09</lastmod>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

@@ -197,7 +197,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../extensions/admonition/" title="Libraries" class="md-tabs__link">
+        <a href="../../libraries/getproducts/" title="Libraries" class="md-tabs__link">
           Libraries
         </a>
       
@@ -729,66 +729,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../compliance/" title="Compliance with GDPR" class="md-nav__link">
-      Compliance with GDPR
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../release-notes/" title="Release notes" class="md-nav__link">
-      Release notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../authors-notes/" title="Author's notes" class="md-nav__link">
-      Author's notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../contributing/" title="Contributing" class="md-nav__link">
-      Contributing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../license/" title="License" class="md-nav__link">
-      License
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -812,6 +752,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getproducts/" title="Get Product List" class="md-nav__link">
+      Get Product List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getsingleproduct/" title="Get Single Product" class="md-nav__link">
+      Get Single Product
+    </a>
+  </li>
+
         
           
           
@@ -1153,7 +1117,14 @@
                 
                 <h3 id="callback-events">Callback Events<a class="headerlink" href="#callback-events" title="Permanent link">&para;</a></h3>
 <p>The structure of the post object sent to this callback is consistant between all event types. Only the attributes contained in the <code>attr</code> field will change.</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;jobid&quot;</span><span class="p">:</span><span class="s2">&quot;VE2018032518574086823ae0&quot;</span><span class="p">,</span>
   <span class="nt">&quot;itemId&quot;</span><span class="p">:</span><span class="s2">&quot;2f8b2b67dd1b4353b3ddb889fbee39c1&quot;</span><span class="p">,</span>
   <span class="nt">&quot;eventId&quot;</span><span class="p">:</span> <span class="s2">&quot;06de4508-8337-4b21-b09e-6b1d87eba14e&quot;</span><span class="p">,</span>
@@ -1162,6 +1133,7 @@
   <span class="nt">&quot;attr&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <table>
 <thead>
@@ -1205,11 +1177,15 @@
 <li>The recipient has previously unsubscribed.</li>
 </ul>
 <h4 id="dropped-event-attributes">Dropped Event Attributes<a class="headerlink" href="#dropped-event-attributes" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="s2">&quot;Global Suppression&quot;</span><span class="p">,</span>
   <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;100.0.0&quot;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <table>
 <thead>
@@ -1234,11 +1210,15 @@
 <h3 id="failed-event">Failed Event<a class="headerlink" href="#failed-event" title="Permanent link">&para;</a></h3>
 <p>The Failed Event is raised when a job item could not be processed due to an error or impossible resolution. This can be due to bad content in user data or other issues in processing a request.</p>
 <h4 id="failed-event-attributes">Failed Event Attributes<a class="headerlink" href="#failed-event-attributes" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="s2">&quot;Missing Token.&quot;</span><span class="p">,</span>
   <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;100.0.0&quot;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <table>
 <thead>
@@ -1267,11 +1247,15 @@
 <h3 id="deferred-event">Deferred Event<a class="headerlink" href="#deferred-event" title="Permanent link">&para;</a></h3>
 <p>The deferred event is raised when an email has been delayed due to network or MTA issues. The message will be retried.</p>
 <h4 id="deferred-event-attributes">Deferred Event Attributes<a class="headerlink" href="#deferred-event-attributes" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;attempts&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
   <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="s2">&quot;Network not available.&quot;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <table>
 <thead>
@@ -1296,11 +1280,15 @@
 <h3 id="hard-bounce-event">Hard Bounce Event<a class="headerlink" href="#hard-bounce-event" title="Permanent link">&para;</a></h3>
 <p>The Hard Bounce Event is raised when an email was not deliverable due to an invalid mailbox.</p>
 <h4 id="hard-bounce-event-attributes">Hard Bounce Event Attributes<a class="headerlink" href="#hard-bounce-event-attributes" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="s2">&quot;Bad destination mailbox address.&quot;</span><span class="p">,</span>
   <span class="nt">&quot;statusCode&quot;</span><span class="p">:</span> <span class="s2">&quot;5.1.1&quot;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <table>
 <thead>
@@ -1325,11 +1313,15 @@
 <h3 id="soft-bounce-event">Soft Bounce Event<a class="headerlink" href="#soft-bounce-event" title="Permanent link">&para;</a></h3>
 <p>The Soft Bounce Event is raised when an email was not deliverable due to issue with the destination or path to the destination mailbox.</p>
 <h4 id="soft-bounce-event-attributes">Soft Bounce Event Attributes<a class="headerlink" href="#soft-bounce-event-attributes" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="s2">&quot;Mailbox disabled, not accepting messages.&quot;</span><span class="p">,</span>
   <span class="nt">&quot;statusCode&quot;</span><span class="p">:</span> <span class="s2">&quot;5.2.1&quot;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <table>
 <thead>
@@ -1354,10 +1346,13 @@
 <h3 id="delivered-event">Delivered Event<a class="headerlink" href="#delivered-event" title="Permanent link">&para;</a></h3>
 <p>The Delivered Event is raised when the email has been accepted by the receiving mailbox.</p>
 <h4 id="delivered-event-attributes">Delivered Event Attributes<a class="headerlink" href="#delivered-event-attributes" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;250 Requested mail action okay, completed.&quot;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <table>
 <thead>
@@ -1378,11 +1373,15 @@
 <h3 id="opened-event">Opened Event<a class="headerlink" href="#opened-event" title="Permanent link">&para;</a></h3>
 <p>The Opened Event is raised when the recipient has opened the email.</p>
 <h4 id="opened-event-attributes">Opened Event Attributes<a class="headerlink" href="#opened-event-attributes" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;userAgent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36&quot;</span><span class="p">,</span>
     <span class="nt">&quot;ipAddr&quot;</span><span class="p">:</span> <span class="s2">&quot;207.170.247.50&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <table>
 <thead>
@@ -1407,12 +1406,17 @@
 <h3 id="clicked-event">Clicked Event<a class="headerlink" href="#clicked-event" title="Permanent link">&para;</a></h3>
 <p>The Clicked Event is raised when the recipient follows a link provided in the email content.</p>
 <h4 id="clicked-event-attributes">Clicked Event Attributes<a class="headerlink" href="#clicked-event-attributes" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;userAgent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36&quot;</span><span class="p">,</span>
     <span class="nt">&quot;ipAddr&quot;</span><span class="p">:</span> <span class="s2">&quot;207.170.247.50&quot;</span><span class="p">,</span>
     <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://velma.com/foo/bar&quot;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <table>
 <thead>

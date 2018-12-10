@@ -197,7 +197,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../admonition/" title="Libraries" class="md-tabs__link md-tabs__link--active">
+        <a href="../../libraries/getproducts/" title="Libraries" class="md-tabs__link md-tabs__link--active">
           Libraries
         </a>
       
@@ -512,66 +512,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../compliance/" title="Compliance with GDPR" class="md-nav__link">
-      Compliance with GDPR
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../release-notes/" title="Release notes" class="md-nav__link">
-      Release notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../authors-notes/" title="Author's notes" class="md-nav__link">
-      Author's notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../contributing/" title="Contributing" class="md-nav__link">
-      Contributing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../license/" title="License" class="md-nav__link">
-      License
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -597,6 +537,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getproducts/" title="Get Product List" class="md-nav__link">
+      Get Product List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getsingleproduct/" title="Get Single Product" class="md-nav__link">
+      Get Single Product
+    </a>
+  </li>
+
         
           
           
@@ -1292,13 +1256,16 @@ further directions on how to set up Pygments or use the official
 is installed, which is a generic syntax highlighter with support for over
 <a href="http://pygments.org/languages">300 languages</a>, CodeHilite will also highlight the code block. Pygments can
 be installed with the following command:</p>
-<div class="codehilite"><pre><span></span>pip install pygments
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install pygments
 </pre></div>
+</td></tr></table>
 
 <p>To enable CodeHilite, add the following lines to your <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">codehilite</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <h3 id="specifying-the-language">Specifying the language<a class="headerlink" href="#specifying-the-language" title="Permanent link">&para;</a></h3>
@@ -1310,14 +1277,18 @@ different ways.</p>
 separate lines. To add code highlighting to those blocks, the easiest way is
 to specify the language directly after the opening block.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>``` python
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>``` python
 import tensorflow as tf
 ```
 </pre></div>
+</td></tr></table>
 
 <p>Result:</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
 </pre></div>
+</td></tr></table>
 
 <h4 id="via-shebang">via Shebang<a class="headerlink" href="#via-shebang" title="Permanent link">&para;</a></h4>
 <p>Alternatively, if the first line of a code block contains a shebang, the
@@ -1325,38 +1296,54 @@ language is derived from the path referenced in the shebang. This will only
 work for code blocks that are indented using four spaces, not for those
 encapsulated in three backticks.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>    #!/usr/bin/python
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    #!/usr/bin/python
     import tensorflow as tf
 </pre></div>
+</td></tr></table>
 
 <p>Result:</p>
-<div class="codehilite"><pre><span></span><span class="ch">#!/usr/bin/python</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="ch">#!/usr/bin/python</span>
 <span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
 </pre></div>
+</td></tr></table>
 
 <h4 id="via-three-colons">via three colons<a class="headerlink" href="#via-three-colons" title="Permanent link">&para;</a></h4>
 <p>If the first line starts with three colons followed by a language identifier,
 the first line is stripped. This will only work for code blocks that are
 indented using four spaces, not for those encapsulated in three backticks.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>    :::python
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    :::python
     import tensorflow as tf
 </pre></div>
+</td></tr></table>
 
 <p>Result:</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="adding-line-numbers">Adding line numbers<a class="headerlink" href="#adding-line-numbers" title="Permanent link">&para;</a></h3>
 <p>Line numbers can be added by enabling the <code>linenums</code> flag in your <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">codehilite</span><span class="p p-Indicator">:</span>
       <span class="l l-Scalar l-Scalar-Plain">linenums</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
+</td></tr></table>
 
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>``` python
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>``` python
 &quot;&quot;&quot; Bubble sort &quot;&quot;&quot;
 def bubble_sort(items):
     for i in range(len(items)):
@@ -1365,6 +1352,7 @@ def bubble_sort(items):
                 items[j], items[j + 1] = items[j + 1], items[j]
 ```
 </pre></div>
+</td></tr></table>
 
 <p>Result:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -1386,7 +1374,38 @@ def bubble_sort(items):
 package adds support for grouping code blocks with tabs. This is especially
 useful for documenting projects with multiple language bindings.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>``` bash tab=&quot;Bash&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>``` bash tab=&quot;Bash&quot;
 #!/bin/bash
 
 echo &quot;Hello world!&quot;
@@ -1419,48 +1438,77 @@ class Program {
 }
 ```
 </pre></div>
+</td></tr></table>
 
 <p>Result:</p>
 <div class="superfences-tabs">
 <input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
 <label for="__tab_1_0">Bash</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="nb">echo</span> <span class="s2">&quot;Hello world!&quot;</span>
-</pre></div></div>
+</pre></div>
+</td></tr></table></div>
 <input name="__tabs_1" type="radio" id="__tab_1_1" />
 <label for="__tab_1_1">C</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div></div>
+</pre></div>
+</td></tr></table></div>
 <input name="__tabs_1" type="radio" id="__tab_1_2" />
 <label for="__tab_1_2">C++</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
   <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello world!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div></div>
+</pre></div>
+</td></tr></table></div>
 <input name="__tabs_1" type="radio" id="__tab_1_3" />
 <label for="__tab_1_3">C#</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">Program</span> <span class="p">{</span>
   <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello world!&quot;</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h3 id="highlighting-specific-lines">Highlighting specific lines<a class="headerlink" href="#highlighting-specific-lines" title="Permanent link">&para;</a></h3>
 <p>Specific lines can be highlighted by passing the line numbers to the <code>hl_lines</code>
 argument placed right after the language identifier. Line counts start at 1.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>``` python hl_lines=&quot;3 4&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>``` python hl_lines=&quot;3 4&quot;
 &quot;&quot;&quot; Bubble sort &quot;&quot;&quot;
 def bubble_sort(items):
     for i in range(len(items)):
@@ -1469,6 +1517,7 @@ def bubble_sort(items):
                 items[j], items[j + 1] = items[j + 1], items[j]
 ```
 </pre></div>
+</td></tr></table>
 
 <p>Result:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -1489,7 +1538,40 @@ def bubble_sort(items):
 <p>CodeHilite uses <a href="http://pygments.org">Pygments</a>, a generic syntax highlighter with support for
 over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages</a>, so the following list of examples is just an excerpt.</p>
 <h3 id="bash">Bash<a class="headerlink" href="#bash" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="k">for</span> OPT in <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
 <span class="k">do</span>
@@ -1524,9 +1606,46 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
 
 <span class="nb">exit</span> <span class="nv">$?</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="c">C<a class="headerlink" href="#c" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="k">extern</span> <span class="kt">size_t</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">extern</span> <span class="kt">size_t</span>
 <span class="nf">pb_varint_scan</span><span class="p">(</span><span class="k">const</span> <span class="kt">uint8_t</span> <span class="n">data</span><span class="p">[],</span> <span class="kt">size_t</span> <span class="n">left</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">assert</span><span class="p">(</span><span class="n">data</span> <span class="o">&amp;&amp;</span> <span class="n">left</span><span class="p">);</span>
   <span class="n">left</span> <span class="o">=</span> <span class="n">left</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="o">?</span> <span class="mi">10</span> <span class="o">:</span> <span class="n">left</span><span class="p">;</span>
@@ -1564,9 +1683,42 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
 
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="c_1">C++<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="n">Extension</span><span class="o">::</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Extension</span><span class="o">::</span>
 <span class="n">Extension</span><span class="p">(</span><span class="k">const</span> <span class="n">Descriptor</span> <span class="o">*</span><span class="n">descriptor</span><span class="p">,</span> <span class="k">const</span> <span class="n">Descriptor</span> <span class="o">*</span><span class="n">scope</span><span class="p">)</span> <span class="o">:</span>
     <span class="n">descriptor_</span><span class="p">(</span><span class="n">descriptor</span><span class="p">),</span>
     <span class="n">scope_</span><span class="p">(</span><span class="n">scope</span><span class="p">)</span> <span class="p">{</span>
@@ -1600,9 +1752,31 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
   <span class="n">LowerString</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">variables_</span><span class="p">[</span><span class="s">&quot;extension&quot;</span><span class="p">]));</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="c_2">C&#35;<a class="headerlink" href="#c_2" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Send</span><span class="p">(</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Send</span><span class="p">(</span>
     <span class="n">Socket</span> <span class="n">socket</span><span class="p">,</span> <span class="kt">byte</span><span class="p">[]</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">offset</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">timeout</span><span class="p">)</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">startTickCount</span> <span class="p">=</span> <span class="n">Environment</span><span class="p">.</span><span class="n">TickCount</span><span class="p">;</span>
   <span class="kt">int</span> <span class="n">sent</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
@@ -1625,9 +1799,43 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
   <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">sent</span> <span class="p">&lt;</span> <span class="n">size</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="clojure">Clojure<a class="headerlink" href="#clojure" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="p">(</span><span class="nf">clojure-version</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">(</span><span class="nf">clojure-version</span><span class="p">)</span>
 
 <span class="p">(</span><span class="kd">defn </span><span class="nv">partition-when</span>
   <span class="p">[</span><span class="nv">f</span><span class="p">]</span>
@@ -1662,9 +1870,32 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
           <span class="o">#</span><span class="p">(</span><span class="nf">.startsWith</span> <span class="nv">%</span> <span class="s">&quot;&gt;&gt;&quot;</span><span class="p">))</span>
           <span class="p">[</span><span class="s">&quot;1d&quot;</span> <span class="s">&quot;33&quot;</span> <span class="s">&quot;&gt;&gt; 1&quot;</span> <span class="s">&quot;&gt;&gt; 2&quot;</span> <span class="s">&quot;22&quot;</span> <span class="s">&quot;&gt;&gt; 3&quot;</span><span class="p">])</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="diff">Diff<a class="headerlink" href="#diff" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="gh">Index: grunt.js</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="gh">Index: grunt.js</span>
 <span class="gh">===================================================================</span>
 <span class="gd">--- grunt.js    (revision 31200)</span>
 <span class="gi">+++ grunt.js    (working copy)</span>
@@ -1688,9 +1919,23 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
          &#39;packages/web/server.js&#39;,
          &#39;packages/web/server/**/*.js&#39;,
 </pre></div>
+</td></tr></table>
 
 <h3 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="k">FROM</span><span class="s"> ubuntu</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">FROM</span><span class="s"> ubuntu</span>
 
 <span class="c"># Install vnc, xvfb in order to create a &#39;fake&#39; display and firefox</span>
 <span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> apt-get install -y x11vnc xvfb firefox
@@ -1705,9 +1950,40 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
 <span class="k">EXPOSE</span><span class="s"> 5900</span>
 <span class="k">CMD</span> <span class="p">[</span><span class="s2">&quot;x11vnc&quot;</span><span class="p">,</span> <span class="s2">&quot;-forever&quot;</span><span class="p">,</span> <span class="s2">&quot;-usepw&quot;</span><span class="p">,</span> <span class="s2">&quot;-create&quot;</span><span class="p">]</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="elixir">Elixir<a class="headerlink" href="#elixir" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">require</span> <span class="nc">Logger</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">require</span> <span class="nc">Logger</span>
 
 <span class="kd">def</span> <span class="n">accept</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="k">do</span>
   <span class="p">{</span><span class="ss">:ok</span><span class="p">,</span> <span class="n">socket</span><span class="p">}</span> <span class="o">=</span> <span class="ss">:gen_tcp</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="n">port</span><span class="p">,</span>
@@ -1739,9 +2015,36 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
   <span class="ss">:gen_tcp</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">socket</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
 <span class="k">end</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="erlang">Erlang<a class="headerlink" href="#erlang" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="nf">circular</span><span class="p">(</span><span class="nv">Defs</span><span class="p">)</span> <span class="o">-&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">circular</span><span class="p">(</span><span class="nv">Defs</span><span class="p">)</span> <span class="o">-&gt;</span>
   <span class="p">[</span> <span class="p">{</span> <span class="p">{</span> <span class="nv">Type</span><span class="p">,</span> <span class="nv">Base</span> <span class="p">},</span> <span class="nv">Fields</span> <span class="p">}</span> <span class="p">||</span>
     <span class="p">{</span> <span class="p">{</span> <span class="nv">Type</span><span class="p">,</span> <span class="nv">Base</span> <span class="p">},</span> <span class="nv">Fields</span> <span class="p">}</span> <span class="o">&lt;-</span> <span class="nv">Defs</span><span class="p">,</span> <span class="nv">Type</span> <span class="o">==</span> <span class="n">msg</span><span class="p">,</span> <span class="n">circular</span><span class="p">(</span><span class="nv">Base</span><span class="p">,</span> <span class="nv">Defs</span><span class="p">)</span> <span class="p">].</span>
 
@@ -1769,9 +2072,24 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
       <span class="n">circular</span><span class="p">(</span><span class="nv">Defs</span><span class="p">,</span> <span class="nv">Fields</span><span class="p">,</span> <span class="nv">Path</span><span class="p">)</span>
   <span class="k">end</span><span class="p">.</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="f">F&#35;<a class="headerlink" href="#f" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="sd">/// Asynchronously download retangles from the server</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="sd">/// Asynchronously download retangles from the server</span>
 <span class="sd">/// and decode the JSON format to F# Rectangle record</span>
 <span class="k">let</span> <span class="o">[&lt;</span><span class="n">Js</span><span class="o">&gt;]</span> <span class="n">getRectangles</span> <span class="bp">()</span> <span class="o">:</span> <span class="n">Async</span><span class="o">&lt;</span><span class="n">Rectangle</span><span class="bp">[]</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">async</span> <span class="o">{</span>
   <span class="k">let</span> <span class="nv">req</span> <span class="o">=</span> <span class="n">XMLHttpRequest</span><span class="bp">()</span>
@@ -1787,9 +2105,36 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
     <span class="n">cleanRectangles</span><span class="bp">()</span>
     <span class="n">rects</span> <span class="o">|&gt;</span> <span class="nn">Array</span><span class="p">.</span><span class="n">iter</span> <span class="n">createRectangle</span> <span class="o">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="go">Go<a class="headerlink" href="#go" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1817,9 +2162,27 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="html">HTML<a class="headerlink" href="#html" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;!doctype html&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;!doctype html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;no-js&quot;</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
@@ -1838,9 +2201,52 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="java">Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.LinkedList</span><span class="o">;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.LinkedList</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.lang.reflect.Array</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">UnsortedHashSet</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="o">{</span>
@@ -1884,9 +2290,28 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
   <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="javascript">JavaScript<a class="headerlink" href="#javascript" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nb">Math</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;lib/math&#39;</span><span class="p">);</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nb">Math</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;lib/math&#39;</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">_extends</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
@@ -1906,9 +2331,25 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">_extends</span><span class="p">(</span><span class="nx">exports</span><span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">],</span> <span class="nx">exports</span><span class="p">);</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mkdocs-material&quot;</span><span class="p">,</span>
   <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.2.4&quot;</span><span class="p">,</span>
   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A Material Design theme for MkDocs&quot;</span><span class="p">,</span>
@@ -1925,9 +2366,32 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
   <span class="err">...</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="julia">Julia<a class="headerlink" href="#julia" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="k">using</span> <span class="n">MXNet</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">using</span> <span class="n">MXNet</span>
 
 <span class="n">mlp</span> <span class="o">=</span> <span class="nd">@mx</span><span class="o">.</span><span class="n">chain</span> <span class="n">mx</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="o">:</span><span class="n">data</span><span class="p">)</span>             <span class="o">=&gt;</span>
   <span class="n">mx</span><span class="o">.</span><span class="n">FullyConnected</span><span class="p">(</span><span class="n">name</span><span class="o">=:</span><span class="n">fc1</span><span class="p">,</span> <span class="n">num_hidden</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span> <span class="o">=&gt;</span>
@@ -1951,9 +2415,32 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
 <span class="c"># fit parameters</span>
 <span class="n">mx</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">train_provider</span><span class="p">,</span> <span class="n">n_epoch</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">eval_data</span><span class="o">=</span><span class="n">eval_provider</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="lua">Lua<a class="headerlink" href="#lua" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kd">local</span> <span class="n">ffi</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;ffi&quot;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">local</span> <span class="n">ffi</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;ffi&quot;</span><span class="p">)</span>
 
 <span class="n">ffi</span><span class="p">.</span><span class="n">cdef</span><span class="s">[[</span>
 <span class="s">  void Sleep(int ms);</span>
@@ -1977,9 +2464,22 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
 <span class="kr">end</span>
 <span class="nb">io.write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="mysql">MySQL<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="k">SELECT</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">SELECT</span>
   <span class="n">Employees</span><span class="p">.</span><span class="n">EmployeeID</span><span class="p">,</span>
   <span class="n">Employees</span><span class="p">.</span><span class="n">Name</span><span class="p">,</span>
   <span class="n">Employees</span><span class="p">.</span><span class="n">Salary</span><span class="p">,</span>
@@ -1993,9 +2493,30 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
 <span class="k">WHERE</span>
   <span class="n">Employees</span><span class="p">.</span><span class="n">EmployeeID</span> <span class="o">=</span> <span class="s1">&#39;087652&#39;</span><span class="p">;</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
 
 <span class="c1">// src/AppBundle/Controller/LuckyController.php</span>
 <span class="k">namespace</span> <span class="nx">AppBundle\Controller</span><span class="p">;</span>
@@ -2017,9 +2538,29 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="protocol-buffers">Protocol Buffers<a class="headerlink" href="#protocol-buffers" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="na">syntax</span> <span class="o">=</span> <span class="s">&quot;proto2&quot;</span><span class="p">;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="na">syntax</span> <span class="o">=</span> <span class="s">&quot;proto2&quot;</span><span class="p">;</span>
 
 <span class="kn">package</span> <span class="nn">caffe</span><span class="p">;</span>
 
@@ -2040,9 +2581,36 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
   <span class="k">optional</span> <span class="kt">int32</span> <span class="na">width</span> <span class="o">=</span> <span class="mi">4</span> <span class="p">[</span><span class="k">default</span> <span class="o">=</span> <span class="mi">0</span><span class="p">];</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  A very simple MNIST classifier.</span>
 <span class="sd">  See extensive documentation at</span>
 <span class="sd">  http://tensorflow.org/tutorials/mnist/beginners/index.md</span>
@@ -2070,9 +2638,45 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
 <span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">10</span><span class="p">]))</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="ruby">Ruby<a class="headerlink" href="#ruby" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;finity/event&#39;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;finity/event&#39;</span>
 <span class="nb">require</span> <span class="s1">&#39;finity/machine&#39;</span>
 <span class="nb">require</span> <span class="s1">&#39;finity/state&#39;</span>
 <span class="nb">require</span> <span class="s1">&#39;finity/transition&#39;</span>
@@ -2109,9 +2713,23 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
   <span class="k">end</span>
 <span class="k">end</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="xml">XML<a class="headerlink" href="#xml" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="cp">&lt;!DOCTYPE mainTag SYSTEM &quot;some.dtd&quot; [ENTITY % entity]&gt;</span>
 <span class="cp">&lt;?oxygen RNGSchema=&quot;some.rng&quot; type=&quot;xml&quot;?&gt;</span>
 <span class="nt">&lt;xs:main-Tag</span> <span class="na">xmlns:xs=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
@@ -2126,6 +2744,7 @@ over <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">300 languages
   <span class="cp">&lt;![CDATA[ some CData ]]&gt;</span>
 <span class="nt">&lt;/main-Tag&gt;</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

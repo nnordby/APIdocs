@@ -197,7 +197,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../extensions/admonition/" title="Libraries" class="md-tabs__link">
+        <a href="../../libraries/getproducts/" title="Libraries" class="md-tabs__link">
           Libraries
         </a>
       
@@ -617,66 +617,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../compliance/" title="Compliance with GDPR" class="md-nav__link">
-      Compliance with GDPR
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../release-notes/" title="Release notes" class="md-nav__link">
-      Release notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../authors-notes/" title="Author's notes" class="md-nav__link">
-      Author's notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../contributing/" title="Contributing" class="md-nav__link">
-      Contributing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../license/" title="License" class="md-nav__link">
-      License
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -700,6 +640,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getproducts/" title="Get Product List" class="md-nav__link">
+      Get Product List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getsingleproduct/" title="Get Single Product" class="md-nav__link">
+      Get Single Product
+    </a>
+  </li>
+
         
           
           
@@ -944,9 +908,11 @@
 </ul>
 <p>A username and password is provided for each sponsor if they are requesting a JWT token from the VFS system. They will need to be passed in the header of the <strong>Generate JWT</strong> call.</p>
 <p>They are in the following form.</p>
-<div class="codehilite"><pre><span></span><span class="err">jwtUsername:</span> <span class="err">fcd</span><span class="mi">523</span><span class="err">be</span><span class="mi">205740</span><span class="err">b</span><span class="mi">0</span><span class="err">b</span><span class="mf">9e54</span><span class="err">f</span><span class="mi">4</span><span class="err">d</span><span class="mi">748</span><span class="err">f</span><span class="mi">4</span><span class="err">d</span><span class="mi">0</span><span class="err">f</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">jwtUsername:</span> <span class="err">fcd</span><span class="mi">523</span><span class="err">be</span><span class="mi">205740</span><span class="err">b</span><span class="mi">0</span><span class="err">b</span><span class="mf">9e54</span><span class="err">f</span><span class="mi">4</span><span class="err">d</span><span class="mi">748</span><span class="err">f</span><span class="mi">4</span><span class="err">d</span><span class="mi">0</span><span class="err">f</span>
 <span class="err">jwtPassword:</span> <span class="err">d</span><span class="mi">6522</span><span class="err">bf</span><span class="mi">09843470</span><span class="err">bab</span><span class="mi">47</span><span class="err">ec</span><span class="mf">56643499e2</span>
 </pre></div>
+</td></tr></table>
 
 <p>You can try it out here:  <a href="https://readme.velma.io/#a6912ad6-5197-4ea6-b923-e7c5f9ffde5d">Generate JWT Token</a></p>
 <h2 id="jwt-token-auth-workflow">JWT Token Auth Workflow<a class="headerlink" href="#jwt-token-auth-workflow" title="Permanent link">&para;</a></h2>
@@ -964,14 +930,28 @@
 2. Payload - main payload of the token, also called claims
 3. Signature - computed signature</p>
 <h3 id="header">Header<a class="headerlink" href="#header" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="err">“typ”:</span> <span class="err">“JWT”,</span>   
   <span class="err">“alg”:</span> <span class="err">“HS256”</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="payload">Payload<a class="headerlink" href="#payload" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;ver&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
   <span class="nt">&quot;apiKey&quot;</span><span class="p">:</span> <span class="s2">&quot;49ep6U3OEH2UR56Dg4BNp6qKxNCnKeDP3l29cyZg”,</span>
 <span class="s2">  &quot;</span><span class="err">sponsorKey</span><span class="s2">&quot;: &quot;</span><span class="mi">0</span><span class="err">a</span><span class="mi">3</span><span class="err">c</span><span class="mi">5</span><span class="err">aad</span><span class="mi">8</span><span class="err">cfb</span><span class="mi">496</span><span class="err">eae</span><span class="mi">7966339</span><span class="err">a</span><span class="mi">024965</span><span class="err">”</span><span class="p">,</span>
@@ -983,6 +963,7 @@
     <span class="nt">&quot;exp&quot;</span><span class="p">:</span> <span class="mi">1516827162</span>
 <span class="p">}</span>     
 </pre></div>
+</td></tr></table>
 
 <ul>
 <li><em>typ</em>: declaring type</li>
@@ -999,27 +980,34 @@
 <h3 id="signature">Signature<a class="headerlink" href="#signature" title="Permanent link">&para;</a></h3>
 <p>Formed from the Header, Payload and Secret</p>
 <p><em>The following is pseudo code representing how to create the signature</em></p>
-<div class="codehilite"><pre><span></span>var <span class="nv">encodedString</span> <span class="o">=</span> base64UrlEncode<span class="o">(</span>header<span class="o">)</span> + <span class="s2">&quot;.&quot;</span> + base64UrlEncode<span class="o">(</span>payload<span class="o">)</span><span class="p">;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>var <span class="nv">encodedString</span> <span class="o">=</span> base64UrlEncode<span class="o">(</span>header<span class="o">)</span> + <span class="s2">&quot;.&quot;</span> + base64UrlEncode<span class="o">(</span>payload<span class="o">)</span><span class="p">;</span>
 HMACSHA256<span class="o">(</span>encodedString, <span class="s1">&#39;secret&#39;</span><span class="o">)</span>
 </pre></div>
+</td></tr></table>
 
 <p><strong>Resulting Signature:</strong>
-<div class="codehilite"><pre><span></span>-xN_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM
-</pre></div></p>
-<p>So for example you may have a header of:</p>
-<div class="codehilite"><pre><span></span>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>-xN_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM
 </pre></div>
+</td></tr></table></p>
+<p>So for example you may have a header of:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
+</pre></div>
+</td></tr></table>
 
 <p>and a payload of:</p>
-<div class="codehilite"><pre><span></span>eyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NjYwYmQifQ
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>eyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NjYwYmQifQ
 </pre></div>
+</td></tr></table>
 
 <p>with signature of :</p>
-<p><div class="codehilite"><pre><span></span>-xN_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>-xN_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM
 </pre></div>
+</td></tr></table>
 we combine all the components together resulting in the following JWT Token :</p>
-<div class="codehilite"><pre><span></span>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NjYwYmQifQ.-xN_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NjYwYmQifQ.-xN_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM
 </pre></div>
+</td></tr></table>
 
 <h3 id="verifying-the-jwt">Verifying the JWT<a class="headerlink" href="#verifying-the-jwt" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1034,8 +1022,9 @@ we combine all the components together resulting in the following JWT Token :</p
 &nbsp;</p>
 <h2 id="api-key">API KEY<a class="headerlink" href="#api-key" title="Permanent link">&para;</a></h2>
 <p>Along with the JWT Token the Sponsor will also need an API Key to make all calls.</p>
-<div class="codehilite"><pre><span></span><span class="err">a</span><span class="mi">9</span><span class="err">fb</span><span class="mi">4</span><span class="err">d</span><span class="mi">11</span><span class="err">bb</span><span class="mi">36466</span><span class="err">f</span><span class="mi">98</span><span class="err">b</span><span class="mi">2</span><span class="err">a</span><span class="mi">70</span><span class="err">fe</span><span class="mi">0</span><span class="err">fa</span><span class="mi">9</span><span class="err">aa</span><span class="mi">4</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">a</span><span class="mi">9</span><span class="err">fb</span><span class="mi">4</span><span class="err">d</span><span class="mi">11</span><span class="err">bb</span><span class="mi">36466</span><span class="err">f</span><span class="mi">98</span><span class="err">b</span><span class="mi">2</span><span class="err">a</span><span class="mi">70</span><span class="err">fe</span><span class="mi">0</span><span class="err">fa</span><span class="mi">9</span><span class="err">aa</span><span class="mi">4</span>
 </pre></div>
+</td></tr></table>
 
 <ul>
 <li>This key is provided and controlled by VFS</li>
@@ -1043,18 +1032,23 @@ we combine all the components together resulting in the following JWT Token :</p
 </ul>
 <p>During an API call the header will contain both JWT token and API Key</p>
 <p><em>Example API Call Header</em>
-<div class="codehilite"><pre><span></span><span class="s1">&#39;Authorization&#39;</span>: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NjYwYmQifQ.-xN_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s1">&#39;Authorization&#39;</span>: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NjYwYmQifQ.-xN_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM
 <span class="s1">&#39;x-api-key&#39;</span>:   a9fb4d11bb36466f98b2a70fe0fa9aa4
 <span class="s1">&#39;Content-Type&#39;</span>: application/json
-</pre></div></p>
+</pre></div>
+</td></tr></table></p>
 <h2 id="sponsor-and-client-keys">Sponsor and Client Keys<a class="headerlink" href="#sponsor-and-client-keys" title="Permanent link">&para;</a></h2>
 <ul>
 <li>To make calls post authentication, the token will need to contain a sponsor and client key</li>
 <li>If the correct sponsor or client key aren't provided the call will fail</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="s1">&#39;Sponsor Key&#39;</span>:  24134e7d7bf345e4bded4e9e0858fd6e
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s1">&#39;Sponsor Key&#39;</span>:  24134e7d7bf345e4bded4e9e0858fd6e
 <span class="s1">&#39;Client Key&#39;</span>: 9f1a3ea4689345e7b91f2169e44a3398
 </pre></div>
+</td></tr></table>
 
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
 <p>For the VFS system to be compromised, the offending system or user would need to have the ability to produce a JWT Token with the known secret.  Additionally, they would need to know the correct API key, sponsor key and client key.  Even if they managed to obtain that information they would also need to know the correct product ID's associated with the sponsors client to make any impact.  Missing any of that information would result in a failed call.</p>

@@ -206,7 +206,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../admonition/" title="Libraries" class="md-tabs__link md-tabs__link--active">
+        <a href="../../libraries/getproducts/" title="Libraries" class="md-tabs__link md-tabs__link--active">
           Libraries
         </a>
       
@@ -521,66 +521,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../compliance/" title="Compliance with GDPR" class="md-nav__link">
-      Compliance with GDPR
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../release-notes/" title="Release notes" class="md-nav__link">
-      Release notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../authors-notes/" title="Author's notes" class="md-nav__link">
-      Author's notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../contributing/" title="Contributing" class="md-nav__link">
-      Contributing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../license/" title="License" class="md-nav__link">
-      License
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -606,6 +546,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getproducts/" title="Get Product List" class="md-nav__link">
+      Get Product List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getsingleproduct/" title="Get Single Product" class="md-nav__link">
+      Get Single Product
+    </a>
+  </li>
+
         
           
           
@@ -941,9 +905,11 @@
 which gives more control over the theme in a page-specific context.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>Add the following lines to your <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">meta</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>Metadata is written as a series of key-value pairs at the beginning of the
@@ -951,7 +917,14 @@ Markdown document, delimited by a blank line which ends the metadata context.
 Naturally, the metadata is stripped from the document before rendering the
 actual page content and made available to the theme.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>title: Lorem ipsum dolor sit amet
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>title: Lorem ipsum dolor sit amet
 description: Nullam urna elit, malesuada eget finibus ut, ac tortor.
 path: path/to/file
 source: file.js
@@ -960,35 +933,41 @@ source: file.js
 
 ...
 </pre></div>
+</td></tr></table>
 
 <p>See the next section which covers the metadata that is supported by Material.</p>
 <h3 id="setting-a-hero-text">Setting a hero text<a class="headerlink" href="#setting-a-hero-text" title="Permanent link">&para;</a></h3>
 <p>Material exposes a simple text-only page-local hero via Metadata, as you can
 see on the current page when you scroll to the top. It's as simple as:</p>
-<div class="codehilite"><pre><span></span>hero: Metadata enables hero teaser texts
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hero: Metadata enables hero teaser texts
 </pre></div>
+</td></tr></table>
 
 <h3 id="linking-sources">Linking sources<a class="headerlink" href="#linking-sources" title="Permanent link">&para;</a></h3>
 <p>When a document is related to a specific set of source files and the <code>repo_url</code>
 is defined inside the project's <code>mkdocs.yml</code>, the files can be linked using the
 <code>source</code> key:</p>
-<div class="codehilite"><pre><span></span>source: file.js
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>source: file.js
 </pre></div>
+</td></tr></table>
 
 <p>The filename is appended to the <code>repo_url</code> set in your <code>mkdocs.yml</code>, but can
 be prefixed with a <code>path</code> to ensure correct path resolving:</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>path: tree/master/docs/extensions
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>path: tree/master/docs/extensions
 source: metadata.md
 </pre></div>
+</td></tr></table>
 
 <p>Result:</p>
 <p>See the <a href="#__source">source</a> section for the resulting output.</p>
 <h3 id="overrides">Overrides<a class="headerlink" href="#overrides" title="Permanent link">&para;</a></h3>
 <h4 id="page-title">Page title<a class="headerlink" href="#page-title" title="Permanent link">&para;</a></h4>
 <p>The page title can be overridden on a per-document level:</p>
-<div class="codehilite"><pre><span></span>title: Lorem ipsum dolor sit amet
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>title: Lorem ipsum dolor sit amet
 </pre></div>
+</td></tr></table>
 
 <p>This will set the <code>title</code> tag inside the document <code>head</code> for the current page
 to the provided value. It will also override the default behavior of Material
@@ -996,20 +975,23 @@ for MkDocs which appends the site title using a dash as a separator to the page
 title.</p>
 <h4 id="page-description">Page description<a class="headerlink" href="#page-description" title="Permanent link">&para;</a></h4>
 <p>The page description can also be overridden on a per-document level:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Nullam urna elit, malesuada eget finibus ut, ac tortor.</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Nullam urna elit, malesuada eget finibus ut, ac tortor.</span>
 </pre></div>
+</td></tr></table>
 
 <p>This will set the <code>meta</code> tag containing the site description inside the
 document <code>head</code> for the current page to the provided value.</p>
 <h4 id="disqus">Disqus<a class="headerlink" href="#disqus" title="Permanent link">&para;</a></h4>
 <p>As describe in the <a href="../../getting-started/#disqus">getting started guide</a>, the Disqus comments section can
 be enabled on a per-document level:</p>
-<div class="codehilite"><pre><span></span>disqus: your-shortname
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>disqus: your-shortname
 </pre></div>
+</td></tr></table>
 
 <p>Disqus can be disabled for a specific page by setting it to an empty value:</p>
-<div class="codehilite"><pre><span></span>disqus:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>disqus:
 </pre></div>
+</td></tr></table>
                 
                   
                     <h2 id="__source">Source</h2>

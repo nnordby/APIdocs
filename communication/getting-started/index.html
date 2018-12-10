@@ -195,7 +195,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../extensions/admonition/" title="Libraries" class="md-tabs__link">
+        <a href="../../libraries/getproducts/" title="Libraries" class="md-tabs__link">
           Libraries
         </a>
       
@@ -510,66 +510,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../compliance/" title="Compliance with GDPR" class="md-nav__link">
-      Compliance with GDPR
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../release-notes/" title="Release notes" class="md-nav__link">
-      Release notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../authors-notes/" title="Author's notes" class="md-nav__link">
-      Author's notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../contributing/" title="Contributing" class="md-nav__link">
-      Contributing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../license/" title="License" class="md-nav__link">
-      License
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -593,6 +533,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getproducts/" title="Get Product List" class="md-nav__link">
+      Get Product List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getsingleproduct/" title="Get Single Product" class="md-nav__link">
+      Get Single Product
+    </a>
+  </li>
+
         
           
           
@@ -1022,35 +986,44 @@
 <p>Before installing <a href="https://www.mkdocs.org">MkDocs</a>, you need to make sure you have Python and <code>pip</code>
 – the Python package manager – up and running. You can verify if you're already
 good to go with the following commands:</p>
-<div class="codehilite"><pre><span></span>python --version
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python --version
 <span class="c1"># Python 2.7.13</span>
 pip --version
 <span class="c1"># pip 9.0.1</span>
 </pre></div>
+</td></tr></table>
 
 <p>Installing and verifying MkDocs is as simple as:</p>
-<div class="codehilite"><pre><span></span>pip install mkdocs <span class="o">&amp;&amp;</span> mkdocs --version
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install mkdocs <span class="o">&amp;&amp;</span> mkdocs --version
 <span class="c1"># mkdocs, version 0.17.1</span>
 </pre></div>
+</td></tr></table>
 
 <p>Material requires MkDocs &gt;= 0.17.1.</p>
 <h3 id="installing-material">Installing Material<a class="headerlink" href="#installing-material" title="Permanent link">&para;</a></h3>
 <h4 id="using-pip">using pip<a class="headerlink" href="#using-pip" title="Permanent link">&para;</a></h4>
 <p>Material can be installed with <code>pip</code>:</p>
-<div class="codehilite"><pre><span></span>pip install mkdocs-material
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install mkdocs-material
 </pre></div>
+</td></tr></table>
 
 <h4 id="using-choco">using choco<a class="headerlink" href="#using-choco" title="Permanent link">&para;</a></h4>
 <p>If you're on Windows you can use <a href="https://chocolatey.org">Chocolatey</a> to install <a href="https://chocolatey.org/packages/mkdocs-material">Material</a>:</p>
-<div class="codehilite"><pre><span></span>choco install mkdocs-material
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>choco install mkdocs-material
 </pre></div>
+</td></tr></table>
 
 <p>This will install all required dependencies like <a href="https://chocolatey.org/packages/python">Python</a> and <a href="https://chocolatey.org/packages/mkdocs">MkDocs</a>.</p>
 <h4 id="cloning-from-github">cloning from GitHub<a class="headerlink" href="#cloning-from-github" title="Permanent link">&para;</a></h4>
 <p>Material can also be used without a system-wide installation by cloning the
 repository into a subfolder of your project's root directory:</p>
-<div class="codehilite"><pre><span></span>git clone https://github.com/squidfunk/mkdocs-material.git
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git clone https://github.com/squidfunk/mkdocs-material.git
 </pre></div>
+</td></tr></table>
 
 <p>This is especially useful if you want to <a href="/customization.md#extending-the-theme">extend the theme</a> and
 <a href="/customization.md#overriding-partials">override some parts</a> of the theme. The theme will reside in the folder
@@ -1085,33 +1058,41 @@ locations. MkDocs only checks its install location for themes.</p>
 <p>If you're familiar with Docker, the official <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">Docker image</a> for Material
 comes with all dependencies pre-installed and ready-to-use with the latest
 version published on PyPI, packaged in a very small image. Pull it with:</p>
-<div class="codehilite"><pre><span></span>docker pull squidfunk/mkdocs-material
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker pull squidfunk/mkdocs-material
 </pre></div>
+</td></tr></table>
 
 <p>The <code>mkdocs</code> executable is provided as an entrypoint, <code>serve</code> is the default
 command. Start the development server in your project root with:</p>
-<div class="codehilite"><pre><span></span>docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 </pre></div>
+</td></tr></table>
 
 <p>If you're using Windows command prompt (<code>cmd.exe</code>), substitute <code>${PWD}</code> with
 <code>"%cd%"</code>.</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>In order to enable the theme just add one of the following lines to your
 project's <code>mkdocs.yml</code>. If you installed Material using a package manager:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&#39;material&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <p>If you cloned Material from GitHub:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">null</span>
   <span class="l l-Scalar l-Scalar-Plain">custom_dir</span><span class="p p-Indicator">:</span> <span class="s">&#39;mkdocs-material/material&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <p>MkDocs includes a development server, so you can review your changes as you go.
 The development server can be started with the following command:</p>
-<div class="codehilite"><pre><span></span>mkdocs serve
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdocs serve
 </pre></div>
+</td></tr></table>
 
 <p>Now you can point your browser to <a href="http://localhost:8000">http://localhost:8000</a> and the Material
 theme should be visible. From here on, you can start writing your documentation,
@@ -1122,11 +1103,15 @@ or read on and customize the theme.</p>
 Material Design <a href="http://www.materialui.co/colors">color palette</a>, which makes it very easy to change the
 overall look of the theme. Just set the primary and accent colors using the
 following variables:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">palette</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">primary</span><span class="p p-Indicator">:</span> <span class="s">&#39;indigo&#39;</span>
     <span class="l l-Scalar l-Scalar-Plain">accent</span><span class="p p-Indicator">:</span> <span class="s">&#39;indigo&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <p>Color names are case-insensitive, but must match the names of the Material
 Design color palette. Valid values are: <code>red</code>, <code>pink</code>, <code>purple</code>, <code>deep purple</code>,
@@ -1209,18 +1194,24 @@ See the guide on <a href="/customization.md">customization</a> for more informat
 the regular sans-serif type for text and the <code>monospaced</code> type for code. Both
 fonts are loaded from <a href="https://fonts.google.com">Google Fonts</a> and can be changed to other fonts,
 like for example the <a href="https://fonts.google.com/specimen/Ubuntu">Ubuntu font family</a>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">font</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">text</span><span class="p p-Indicator">:</span> <span class="s">&#39;Ubuntu&#39;</span>
     <span class="l l-Scalar l-Scalar-Plain">code</span><span class="p p-Indicator">:</span> <span class="s">&#39;Ubuntu</span><span class="nv"> </span><span class="s">Mono&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <p>The text font will be loaded in weights 400 and <strong>700</strong>, the <code>monospaced</code> font
 in regular weight. If you want to load fonts from other destinations or don't
 want to use the Google Fonts loading magic, just set <code>font</code> to <code>false</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">font</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="logo">Logo<a class="headerlink" href="#logo" title="Permanent link">&para;</a></h3>
 <blockquote>
@@ -1230,16 +1221,21 @@ want to use the Google Fonts loading magic, just set <code>font</code> to <code>
 leave some room towards the edges and be composed of high contrast areas on a
 transparent ground, as it will be placed on the colored header bar and drawer.
 Simply create the folder <code>docs/images</code>, add your logo and embed it with:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">logo</span><span class="p p-Indicator">:</span> <span class="s">&#39;images/logo.svg&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <p>Additionally, the default icon can be changed by setting an arbitrary ligature
 (or Unicode code point) from the <a href="https://material.io/icons/">Material Design icon font</a>, e.g.</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">logo</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">icon</span><span class="p p-Indicator">:</span> <span class="s">&#39;cloud&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="language">Language<a class="headerlink" href="#language" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
@@ -1327,16 +1323,19 @@ translations for all template variables and labels in the following languages:</
 </table>
 
 <p>Specify the language with:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">language</span><span class="p p-Indicator">:</span> <span class="s">&#39;en&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <p>If the language is not specified, Material falls back to English. To create a
 translation for another language, copy the localization file of an existing
 language, name the new file using the <a href="https://www.w3schools.com/tags/ref_language_codes.asp">2-letter language code</a> and adjust
 all translations:</p>
-<div class="codehilite"><pre><span></span>cp partials/language/en.html partials/language/jp.html
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cp partials/language/en.html partials/language/jp.html
 </pre></div>
+</td></tr></table>
 
 <h4 id="text-direction">Text direction<a class="headerlink" href="#text-direction" title="Permanent link">&para;</a></h4>
 <blockquote>
@@ -1345,9 +1344,11 @@ all translations:</p>
 <p>Material supports both, left-to-right (<code>ltr</code>) and right-to-left (<code>rtl</code>) text
 direction. This enables more languages like Arabic, Hebrew, Syriac and others
 to be used with the theme:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">direction</span><span class="p p-Indicator">:</span> <span class="s">&#39;rtl&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <h4 id="site-search">Site search<a class="headerlink" href="#site-search" title="Permanent link">&para;</a></h4>
 <blockquote>
@@ -1359,10 +1360,13 @@ with <a href="https://github.com/MihaiValentin/lunr-languages">lunr-languages</a
 Material selects the matching (or best-matching) stemmer for the given theme
 language. Multilingual search can be activated in your project's <code>mkdocs.yml</code>
 by explicitly defining the search language(s):</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">search</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">language</span><span class="p p-Indicator">:</span> <span class="s">&#39;en,</span><span class="nv"> </span><span class="s">de,</span><span class="nv"> </span><span class="s">ru&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <p>At the time of writing, the following languages are supported:</p>
 <table style="white-space: nowrap;">
@@ -1415,10 +1419,13 @@ language.</p>
 </div>
 <p>The separator for tokenization can be customized which makes it possible
 to index parts of words that are separated by <code>-</code> or <code>.</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">search</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">tokenizer</span><span class="p p-Indicator">:</span> <span class="s">&#39;[\s\-\.]+&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="favicon">Favicon<a class="headerlink" href="#favicon" title="Permanent link">&para;</a></h3>
 <blockquote>
@@ -1426,9 +1433,11 @@ to index parts of words that are separated by <code>-</code> or <code>.</code>:<
 </blockquote>
 <p>The default favicon can be changed by setting the <code>favicon</code> variable to an
 <code>.ico</code> or image file:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">favicon</span><span class="p p-Indicator">:</span> <span class="s">&#39;assets/images/favicon.ico&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
 <h4 id="tabs">Tabs<a class="headerlink" href="#tabs" title="Permanent link">&para;</a></h4>
@@ -1439,18 +1448,23 @@ to index parts of words that are separated by <code>-</code> or <code>.</code>:<
 screens in the form of tabs. This is especially useful for larger documentation
 projects with only few top-level sections. Tabs can be enabled by setting the
 respective feature flag to true:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">feature</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">tabs</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">&para;</a></h2>
 <h3 id="adding-a-source-repository">Adding a source repository<a class="headerlink" href="#adding-a-source-repository" title="Permanent link">&para;</a></h3>
 <p>To include a link to the repository of your project within your documentation,
 set the following variables via your project's <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">repo_name</span><span class="p p-Indicator">:</span> <span class="s">&#39;squidfunk/mkdocs-material&#39;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">repo_name</span><span class="p p-Indicator">:</span> <span class="s">&#39;squidfunk/mkdocs-material&#39;</span>
 <span class="l l-Scalar l-Scalar-Plain">repo_url</span><span class="p p-Indicator">:</span> <span class="s">&#39;https://github.com/squidfunk/mkdocs-material&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <p>The name of the repository will be rendered next to the search bar on big
 screens and as part of the main navigation drawer on smaller screen sizes.
@@ -1474,7 +1488,14 @@ button is shown or not.</p>
 automatically included <a href="http://fontawesome.io/icons/">FontAwesome</a> webfont. The <code>type</code> must denote the
 name of the social service, e.g. <code>github</code>, <code>twitter</code> or <code>linkedin</code> and the
 <code>link</code> must contain the URL you want to link to:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">social</span><span class="p p-Indicator">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="s">&#39;github&#39;</span>
       <span class="l l-Scalar l-Scalar-Plain">link</span><span class="p p-Indicator">:</span> <span class="s">&#39;https://github.com/squidfunk&#39;</span>
@@ -1483,6 +1504,7 @@ name of the social service, e.g. <code>github</code>, <code>twitter</code> or <c
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="s">&#39;linkedin&#39;</span>
       <span class="l l-Scalar l-Scalar-Plain">link</span><span class="p p-Indicator">:</span> <span class="s">&#39;https://linkedin.com/in/squidfunk&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <p>The links are generated in order and the <code>type</code> of the links must match the
 name of the FontAwesome glyph. The <code>fa</code> is automatically added, so <code>github</code>
@@ -1491,9 +1513,11 @@ will result in <code>fa fa-github</code>.</p>
 <p>A <a href="https://developers.google.com/web/fundamentals/web-app-manifest/">Web App Manifest</a> is a simple JSON file that tells the browser about your
 web application and how it should behave when installed on the user's mobile
 device or desktop. You can specify a manifest in your <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">manifest</span><span class="p p-Indicator">:</span> <span class="s">&#39;manifest.webmanifest&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="more-advanced-customization">More advanced customization<a class="headerlink" href="#more-advanced-customization" title="Permanent link">&para;</a></h3>
 <p>If you want to change the general appearance of the Material theme, see
@@ -1504,18 +1528,23 @@ device or desktop. You can specify a manifest in your <code>mkdocs.yml</code>:</
 Besides basic tracking, clicks on all outgoing links can be tracked as well as
 how site search is used. Tracking can be activated in your project's
 <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">google_analytics</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">google_analytics</span><span class="p p-Indicator">:</span>
   <span class="p p-Indicator">-</span> <span class="s">&#39;UA-XXXXXXXX-X&#39;</span>
   <span class="p p-Indicator">-</span> <span class="s">&#39;auto&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="disqus">Disqus<a class="headerlink" href="#disqus" title="Permanent link">&para;</a></h3>
 <p>Material for MkDocs is integrated with <a href="https://disqus.com">Disqus</a>, so if you want to add a
 comments section to your documentation set the shortname of your Disqus project
 in your <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">disqus</span><span class="p p-Indicator">:</span> <span class="s">&#39;your-shortname&#39;</span>
 </pre></div>
+</td></tr></table>
 
 <p>The comments section is inserted on <em>every page, except the index page</em>.
 Additionally, a new entry at the bottom of the table of contents is generated
@@ -1531,13 +1560,19 @@ load properly.</p>
 <p>MkDocs supports several <a href="https://www.mkdocs.org/user-guide/writing-your-docs/#markdown-extensions">Markdown extensions</a>. The following extensions
 are not enabled by default (see the link for which are enabled by default)
 but highly recommended, so they should be switched on at all times:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">admonition</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">codehilite</span><span class="p p-Indicator">:</span>
       <span class="l l-Scalar l-Scalar-Plain">guess_lang</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">toc</span><span class="p p-Indicator">:</span>
       <span class="l l-Scalar l-Scalar-Plain">permalink</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
+</td></tr></table>
 
 <p>For more information, see the following list of extensions supported by the
 Material theme including more information regarding installation and usage:</p>
@@ -1551,7 +1586,53 @@ Material theme including more information regarding installation and usage:</p>
 </ul>
 <h2 id="full-example">Full example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h2>
 <p>Below is a full example configuration for a <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># Project information</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Project information</span>
 <span class="l l-Scalar l-Scalar-Plain">site_name</span><span class="p p-Indicator">:</span> <span class="s">&#39;Material</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">MkDocs&#39;</span>
 <span class="l l-Scalar l-Scalar-Plain">site_description</span><span class="p p-Indicator">:</span> <span class="s">&#39;A</span><span class="nv"> </span><span class="s">Material</span><span class="nv"> </span><span class="s">Design</span><span class="nv"> </span><span class="s">theme</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">MkDocs&#39;</span>
 <span class="l l-Scalar l-Scalar-Plain">site_author</span><span class="p p-Indicator">:</span> <span class="s">&#39;Martin</span><span class="nv"> </span><span class="s">Donath&#39;</span>
@@ -1599,6 +1680,7 @@ Material theme including more information regarding installation and usage:</p>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">toc</span><span class="p p-Indicator">:</span>
       <span class="l l-Scalar l-Scalar-Plain">permalink</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

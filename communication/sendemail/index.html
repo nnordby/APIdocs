@@ -197,7 +197,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../extensions/admonition/" title="Libraries" class="md-tabs__link">
+        <a href="../../libraries/getproducts/" title="Libraries" class="md-tabs__link">
           Libraries
         </a>
       
@@ -575,66 +575,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../compliance/" title="Compliance with GDPR" class="md-nav__link">
-      Compliance with GDPR
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../release-notes/" title="Release notes" class="md-nav__link">
-      Release notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../authors-notes/" title="Author's notes" class="md-nav__link">
-      Author's notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../contributing/" title="Contributing" class="md-nav__link">
-      Contributing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../license/" title="License" class="md-nav__link">
-      License
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -658,6 +598,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getproducts/" title="Get Product List" class="md-nav__link">
+      Get Product List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../libraries/getsingleproduct/" title="Get Single Product" class="md-nav__link">
+      Get Single Product
+    </a>
+  </li>
+
         
           
           
@@ -864,42 +828,98 @@
 <p>Here we have created a simple Happy Birthday email in the online Velma.io Product creator.</p>
 <hr />
 <p><img alt="enter image description here" src="https://s3-us-west-2.amazonaws.com/vfs-docs/APIDocs/Simple+-+Email+Workflow/SimpleEmail.jpg" /></p>
-<p>The product ID in this case is <strong>200</strong> so if you look at the Command Packet (JSON) being posted you will see the product node has an id of "200".</p>
+<p>The product ID in this case is <code class="codehilite"><span class="mi">200</span></code> so if you look at the Command Packet (JSON) being posted you will see the product node has an id of "200".</p>
 <p>There are two ways of <a href="/getting-started/commandpacket-spec/#product">configuring the product node</a> in Velma.io for a simple email.</p>
 <ol>
 <li>Use an existing product id</li>
 <li>Use a custom URL.</li>
 </ol>
 <p>Using an existing product.</p>
-<p><div class="codehilite"><pre><span></span><span class="s2">&quot;product&quot;</span><span class="err">:</span> <span class="p">{</span>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;product&quot;</span><span class="err">:</span> <span class="p">{</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;200&quot;</span> <span class="err">--</span> <span class="err">if</span> <span class="err">you</span> <span class="err">are</span> <span class="err">using</span> <span class="err">a</span> <span class="err">velma.io</span> <span class="err">product</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 Using a custom url.</p>
-<div class="codehilite"><pre><span></span><span class="s2">&quot;product&quot;</span><span class="err">:</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;product&quot;</span><span class="err">:</span> <span class="p">{</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;CUSTOM&quot;</span><span class="p">,</span> <span class="err">--</span> <span class="err">tells</span> <span class="err">Velma.io</span> <span class="err">that</span> <span class="err">a</span> <span class="err">custom</span> <span class="err">url</span> <span class="err">is</span> <span class="err">to</span> <span class="err">be</span> <span class="err">used</span>
     <span class="nt">&quot;url: &quot;</span><span class="err">&lt;custom</span> <span class="err">public</span> <span class="err">url&gt;&quot;</span> <span class="err">--</span> <span class="err">NOTE</span><span class="p">:</span> <span class="err">this</span> <span class="err">must</span> <span class="err">be</span> <span class="err">a</span> <span class="err">publicly</span> <span class="err">accessible</span> <span class="err">URL.</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
-<p>Here is a sample command packet below:</p>
 <p>Inside the html of the product there are tokens such as:</p>
-<p><em>General Tokens</em></p>
-<div class="codehilite"><pre><span></span>{{user.fullname}}
+<p><em>Replace Tokens</em></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>{{user.fullname}}
 {{user.title}}
 </pre></div>
+</td></tr></table>
 
 <p><em>Smart Tokens</em>
 - these are tokens that show based on the existence of a value.</p>
-<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">vf-show</span><span class="o">=</span><span class="s">&quot;user.fullname&quot;</span><span class="p">&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">vf-show</span><span class="o">=</span><span class="s">&quot;user.fullname&quot;</span><span class="p">&gt;</span>
     Hi <span class="p">&lt;</span><span class="nt">span</span> <span class="na">vf-var</span><span class="o">=</span><span class="s">&quot;user.fullname&quot;</span><span class="p">&gt;</span>John Smith<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
+</td></tr></table>
 
+<div class="admonition question">
+<p class="admonition-title">Token Questions?</p>
+<p>For a list of tokens and the different types, see <a href="/getting-started/commandpacket-tokens/">Command Packet Tokens</a></p>
+</div>
 <h4 id="step-2-create-command-packet">Step 2. Create Command Packet<a class="headerlink" href="#step-2-create-command-packet" title="Permanent link">&para;</a></h4>
 <p>Velma.io will replace those tokens with the values in the command packet and email the document to the email in the contact node.</p>
 <p>Command Packet:</p>
-<div class="codehilite"><pre><span></span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> <span class="p">{</span>
    <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.6&quot;</span><span class="p">,</span>
    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;email&quot;</span><span class="p">,</span>
    <span class="nt">&quot;authentication&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -942,12 +962,60 @@ Using a custom url.</p>
    <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h4 id="step-3-post-command-packet">Step 3. Post Command Packet<a class="headerlink" href="#step-3-post-command-packet" title="Permanent link">&para;</a></h4>
 <p>All that is required is posting the command packet to the endpoint.</p>
-<p><code>https://api.vfs.velma.com/v1/job</code></p>
+<p><code class="codehilite"><span class="err">https://api.vfs.velma.com/v</span><span class="mi">1</span><span class="err">/job</span></code></p>
 <h5 id="sample-curl-request">Sample Curl Request<a class="headerlink" href="#sample-curl-request" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>curl -X POST <span class="se">\</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>curl -X POST <span class="se">\</span>
   https://api.vfs.velma.com/v1/job <span class="se">\</span>
   -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="se">\</span>
   -H <span class="s1">&#39;Postman-Token: e9563fab-b3bb-4527-8660-ddec304120ee&#39;</span> <span class="se">\</span>
@@ -996,6 +1064,7 @@ Using a custom url.</p>
 <span class="s1">   ]</span>
 <span class="s1">}&#39;</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 
