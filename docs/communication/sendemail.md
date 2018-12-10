@@ -21,7 +21,7 @@ Here we have created a simple Happy Birthday email in the online Velma.io Produc
 ![enter image description here](https://s3-us-west-2.amazonaws.com/vfs-docs/APIDocs/Simple+-+Email+Workflow/SimpleEmail.jpg)
 
 
-The product ID in this case is **200** so if you look at the Command Packet (JSON) being posted you will see the product node has an id of "200".
+The product ID in this case is `:::js 200` so if you look at the Command Packet (JSON) being posted you will see the product node has an id of "200".
 
 There are two ways of [configuring the product node][2] in Velma.io for a simple email.
 
@@ -46,13 +46,9 @@ Using a custom url.
 }
 ```
 
-
-Here is a sample command packet below:
-
-
 Inside the html of the product there are tokens such as:
 
-*General Tokens*
+*Replace Tokens*
 
 ```html
 {{user.fullname}}
@@ -67,6 +63,10 @@ Inside the html of the product there are tokens such as:
 	Hi <span vf-var="user.fullname">John Smith</span>
 </div>
 ```
+
+!!! question "Token Questions?"
+    For a list of tokens and the different types, see [Command Packet Tokens](/getting-started/commandpacket-tokens/)
+
 
 
 #### Step 2. Create Command Packet
@@ -125,7 +125,7 @@ Command Packet:
 
 All that is required is posting the command packet to the endpoint.
 
-`https://api.vfs.velma.com/v1/job`
+`:::json https://api.vfs.velma.com/v1/job`
 
 
 ##### Sample Curl Request

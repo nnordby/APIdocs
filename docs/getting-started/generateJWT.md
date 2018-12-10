@@ -1,6 +1,8 @@
 You will use the keys provided to you during onboarding to generate a JWT token.
 If running in Postman, the system will create a jwt-token property for you automatically in your enivronment.
 
+##### Generate JWT Token
+
 ```bash tab="Curl"
 curl --request POST \
   --url 'https://api.vfs.velma.com/v1-account/auth/token/generate' \

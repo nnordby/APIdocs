@@ -91,12 +91,12 @@ Most tags function the same. They extract data from the _command packet_, manipu
 
 __Example:__
 
-```
+```html
 <a vfVar='user.phone' href='tel:5555555555'>Call me</a>
 ```
 
 Assuming the _command packet_ has a value user.phone="1234567890", the resulting string from the above example will read as follows.
 
-```
+```html
 <a vfVar='user.phone' href='tel:1234567890'>Call me</a>
 ```

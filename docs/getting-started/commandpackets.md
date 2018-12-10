@@ -5,13 +5,13 @@ They contain all of the data and instructions that  Velma.io needs to provide in
 
 ### Nodes
 
-1. Type - Tells Velma.io what type of job we are sending it.
-2. Authentication - Who is sending it.
-3. Product - Which product it is going to work with.
-4. Email - The source of the communication. (Print, SMS, Etc)
-5. User - The senders data. (Also referred to as user tokens)
-6. Contact - The recipients data.  (Also referred to as contact tokens)
-7. Template - Document specific data
+1. `:::js type` - Tells Velma.io what type of job we are sending it.
+2. `:::js authentication` - Who is sending it.
+3. `:::js email` - The source of the communication. (Print, SMS, Etc)
+4. `:::js product` - Which product it is going to work with.
+5. `:::js template` - Document specific data
+6. `:::js user` - The senders data. (Also referred to as user tokens)
+7. `:::js contact` - The recipients data.  (Also referred to as contact tokens)
 
 #### Sample Email Command Packet
 

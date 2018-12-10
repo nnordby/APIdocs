@@ -79,6 +79,7 @@ markdown_extensions:
   - markdown.extensions.admonition
   - markdown.extensions.codehilite:
       guess_lang: false
+      linenums: true
   - markdown.extensions.def_list
   - markdown.extensions.footnotes
   - markdown.extensions.meta
@@ -125,12 +126,9 @@ nav:
     - Specimen: specimen.md
     - Specimen2: extensions/admonition.md
     - Customization: customization.md
-    - Compliance with GDPR: compliance.md
-    - Release notes: release-notes.md
-    - Author's notes: authors-notes.md
-    - Contributing: contributing.md
-    - License: license.md
   - Libraries:
+    - Get Product List: libraries/getproducts.md
+    - Get Single Product: libraries/getsingleproduct.md
     - Admonition: extensions/admonition.md
     - CodeHilite: extensions/codehilite.md
     - Footnotes: extensions/footnotes.md
