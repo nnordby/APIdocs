@@ -121,6 +121,7 @@ nav:
     - API Status Call: getting-started/api-statuscall.md
   - Content:
     - Introduction: libraries/introduction.md
+    - Product Attributes: libraries/productAttributes.md
     - Edit Products: libraries/editProducts.md
     - Add Products: libraries/addProducts.md
     - Get Product List: libraries/getproducts.md
