@@ -136,6 +136,8 @@ nav:
     - Specimen: specimen.md
     - Specimen2: extensions/admonition.md
     - Customization: customization.md
+  - Settings:
+      Introduction: settings/index.md
   - Examples:
     - Sending an Email: example/index.md
 

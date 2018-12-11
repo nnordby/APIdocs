@@ -13,7 +13,7 @@ The email workflow is  a simple way to POST a small piece of JSON to velma.io an
 
 Choose or edit an existing product or create your own
 !!! example
-    See the <img src="/images/postmanIcon.png" width="24" align="left" style="padding-right: 5px;"><a href="https://readme.velma.io/#13223d0c-c9fa-44cf-b8f0-1de9d562a030" target="_blank">Get Products</a> Postman Collection.
+    See the <img src="../../images/postmanIcon.png" width="24" align="left" style="padding-right: 5px;"><a href="https://readme.velma.io/#13223d0c-c9fa-44cf-b8f0-1de9d562a030" target="_blank">Get Products</a> Postman Collection.
 
 Here we have created a simple Happy Birthday email in the online Velma.io Product creator.
 
