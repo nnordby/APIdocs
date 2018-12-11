@@ -133,6 +133,7 @@ nav:
     - PyMdown: extensions/pymdown.md
   - Communication:
     - Introduction: communication/introduction.md
+    - Email Delivery: communication/emailDelivery.md
     - Send Email: communication/sendemail.md
     - Theme: communication/theme.md
     - Getting started: getting-started.md
