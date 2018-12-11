@@ -23,7 +23,7 @@ site_name: Velma.io
 site_description: Documentation for the Velma API's
 site_author: NSN Solutions, Inc.
 #site_url: https://squidfunk.github.io/mkdocs-material/
-site_url: https://nnordby.github.io/APIdocs/
+site_url: https://nnordby.github.io/APIdocs
 
 # Repository
 #repo_name: squidfunk/mkdocs-material
