@@ -1,4 +1,4 @@
-!!! quote "**Our mission is to help organizations grow and thrive by providing intelligent engagement solutions.**"
+!!! quote "<large>**Our mission is to help organizations grow and thrive by providing intelligent engagement solutions.**</large>"
 
 Velma.io is an intelligent engagement toolkit for applications or services.  Each tool can be invoked separately, or as part of an orchestrated communication strategy.
 
