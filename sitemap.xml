@@ -126,6 +126,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://nnordby.github.io/APIdocs/communication/emailDelivery/</loc>
+     <lastmod>2018-12-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://nnordby.github.io/APIdocs/communication/sendemail/</loc>
      <lastmod>2018-12-11</lastmod>
      <changefreq>daily</changefreq>
