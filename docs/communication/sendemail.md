@@ -28,7 +28,7 @@ There are two ways of [configuring the product node][2] in Velma.io for a simple
 1. Use an existing product id
 2. Use a custom URL.
 
-[2]: /getting-started/commandpacket-spec/#product
+[2]: ../../getting-started/commandpacket-spec/#product
 
 Using an existing product.
 
@@ -65,7 +65,7 @@ Inside the html of the product there are tokens such as:
 ```
 
 !!! question "Token Questions?"
-    For a list of tokens and the different types, see [Command Packet Tokens](/getting-started/commandpacket-tokens/)
+    For a list of tokens and the different types, see [Command Packet Tokens](../../getting-started/commandpacket-tokens/)
 
 
 
