@@ -23,7 +23,7 @@ site_name: Velma.io
 site_description: Documentation for the Velma API's
 site_author: NSN Solutions, Inc.
 #site_url: https://squidfunk.github.io/mkdocs-material/
-site_url: https://readme.velma.io
+site_url: https://nnordby.github.io/APIdocs/
 
 # Repository
 #repo_name: squidfunk/mkdocs-material
@@ -119,14 +119,8 @@ nav:
     - Response Codes: getting-started/commandpacket-responseCodes.md
     - Callback Events: getting-started/callbackevents.md
     - API Status Call: getting-started/api-statuscall.md
-  - Communication:
-    - Send Email: communication/sendemail.md
-    - Theme: communication/theme.md
-    - Getting started: getting-started.md
-    - Specimen: specimen.md
-    - Specimen2: extensions/admonition.md
-    - Customization: customization.md
-  - Libraries:
+  - Content:
+    - Introduction: libraries/introduction.md
     - Get Product List: libraries/getproducts.md
     - Get Single Product: libraries/getsingleproduct.md
     - Admonition: extensions/admonition.md
@@ -135,6 +129,13 @@ nav:
     - Metadata: extensions/metadata.md
     - Permalinks: extensions/permalinks.md
     - PyMdown: extensions/pymdown.md
+  - Communication:
+    - Send Email: communication/sendemail.md
+    - Theme: communication/theme.md
+    - Getting started: getting-started.md
+    - Specimen: specimen.md
+    - Specimen2: extensions/admonition.md
+    - Customization: customization.md
   - Examples:
     - Sending an Email: example/index.md
 

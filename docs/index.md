@@ -6,12 +6,12 @@ Velma.io is an intelligent engagement toolkit for applications or services.  Eac
 
 1. Solution Developers
 2. Communication Administrators <small>([Get Started Here][1])</small>
-[1]: /libraries/getproducts/
+[1]: /libraries/introduction/
 
 The information should be both technical but practical for all readers.  [Postman][2] collections are available throughout the site when more in-depth technical information is required.
 
 <figure>
-    <img src='images/Velma.png' style="max-width: 500px;">
+    <img src='/images/Velma.png' style="max-width: 500px;">
     <figcaption><small>Velma.io Admin Dashboard</small></figcaption>
 </figure>
 
