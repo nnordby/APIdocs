@@ -1,11 +1,18 @@
 Document elements and what they mean and how they interact with each other.
+<a href="../../images/Product.png" target="_blank">
+  <img alt="Product View" src="../../images/Product.png">
+</a>
 
-<figure>
-    <img src='../../images/Product.png' style="max-width: 600px;">
-    <figcaption><small>Product View</small></figcaption>
-</figure>
 
 ### 1. Edit
+The edit (#1) button allows you to edit the HTML or text of the product.
+
+<a href="../../images/Product-Edit.png" target="_blank">
+  <img alt="Product View" src="../../images/Product-Edit.png">
+</a>
+
+
+From here, you can view your changes in real-time and publish them live.
 
 ### 2. Status
 
