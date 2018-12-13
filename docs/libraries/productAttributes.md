@@ -13,8 +13,9 @@ The edit (#1) button allows you to edit the HTML or text of the product.
 
 
 From here, you can view your changes in real-time and publish them live.
-
+buil
 ### 2. Status
+Make a document Active or Inactive
 
 ### 3. Information
 
