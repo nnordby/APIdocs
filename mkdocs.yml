@@ -121,9 +121,7 @@ nav:
     - API Status Call: getting-started/api-statuscall.md
   - Content:
     - Introduction: libraries/introduction.md
-    - Product Attributes: libraries/productAttributes.md
-    - Edit Products: libraries/editProducts.md
-    - Add Products: libraries/addProducts.md
+    - Templates: libraries/templates.md
     - Get Product List: libraries/getproducts.md
     - Get Single Product: libraries/getsingleproduct.md
     - Admonition: extensions/admonition.md
@@ -133,8 +131,6 @@ nav:
     - Permalinks: extensions/permalinks.md
     - PyMdown: extensions/pymdown.md
   - Communication:
-    - Introduction: communication/introduction.md
-    - Email Delivery: communication/emailDelivery.md
     - Send Email: communication/sendemail.md
     - Theme: communication/theme.md
     - Getting started: getting-started.md

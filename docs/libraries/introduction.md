@@ -8,3 +8,7 @@ Individual documents that represent the communication message being delivered to
 </figure>
 
 The Product page gives you the ability to manage and curate your content by letting you quickly filter by media type (print, email, SMS, etc), communication classification (marketing, transaction, notification, campaign), and tags you may have assigned to the product.  From this page you can select a product to edit or add a new product from scratch.
+
+Products can be created from [Templates][1] which help drive the common elements from which a product is produced.  For example, if a set of products are going to be created that share a common style or graphic, a Template can be built that provides a framework, or 'template', that can make the creation of a lot of products with shared elements quick and easy.
+
+[1]: templates.md

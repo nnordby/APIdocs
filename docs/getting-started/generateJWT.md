@@ -135,3 +135,6 @@ $.ajax(settings).done(function (response) {
     }
 }
 ```
+
+!!! example "Try it"
+    See the <img src="../../images/postmanIcon.png" width="24" align="left" style="padding-right: 5px;"><a href="https://readme.velma.io/#a6912ad6-5197-4ea6-b923-e7c5f9ffde5d" target="_blank">Generate JWT</a> Postman Collection.
