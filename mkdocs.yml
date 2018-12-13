@@ -122,6 +122,9 @@ nav:
   - Content:
     - Introduction: libraries/introduction.md
     - Templates: libraries/templates.md
+    - Product Attributes: libraries/productAttributes.md
+    - Add Products: libraries/addProducts.md
+    - Edit Products: libraries/editProducts.md
     - Get Product List: libraries/getproducts.md
     - Get Single Product: libraries/getsingleproduct.md
     - Admonition: extensions/admonition.md
@@ -131,9 +134,10 @@ nav:
     - Permalinks: extensions/permalinks.md
     - PyMdown: extensions/pymdown.md
   - Communication:
+    - Introduction: communication/introduction.md
+    - Email Delivery: communication/emailDelivery.md
     - Send Email: communication/sendemail.md
     - Theme: communication/theme.md
-    - Getting started: getting-started.md
     - Specimen: specimen.md
     - Specimen2: extensions/admonition.md
     - Customization: customization.md

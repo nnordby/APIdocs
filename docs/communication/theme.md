@@ -42,4 +42,4 @@ theme:
 
 For detailed instructions see the [getting started guide][3].
 
-  [3]: getting-started.md
+  [3]: /getting-started.md
